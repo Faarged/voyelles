@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <?php include "header.php"; ?>
 
+<p>Accueil !!!</p>
+
+    <?php include "footer.php"; ?>
   </body>
 </html>
