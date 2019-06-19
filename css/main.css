@@ -1,0 +1,53 @@
+/* Sommaire du CSS de Consonne Open Source Project V.1
+
+Pour modifier plus facilement ce CSS veuller trouver ci-dessous
+la section ou se trouve l'élément à modifier.
+Par exemple si vous voulez supprimer le header faites un CTRL + F et rechercher
+"1) header" vous n'aurez plus qu'à trouver l'élément à modifier
+dans la section header !
+
+1) header
+2)
+3)
+4)
+5)
+
+Merci d'utiliser COSP et de faire vivre ce programme !
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/*////////////////////////// 1) header ////////////////////////////////////*/
+/* section déstiné à l'header et le panel de navigation admin du coté */
+
+/* titre du header */
+header > p {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+/* fin du CSS pour le titre du header */
+
+/* barre de navigation du header */
+/* style des liens par defaut*/
+.nav > a{
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+/* fin du style par defaut */
+
+/* style des liens en hover */
+.nav > a:hover{
+  color: red;
+  text-decoration: underline;
+}
+/* fin du style avec hover */
+/* fin de la barre de navigation du header */
+
+/*////////////////////////// fin header ////////////////////////////////////*/
