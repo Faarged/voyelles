@@ -1,3 +1,9 @@
+<?php //doit être placé en début de page, avant le doctype
+session_start();
+if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
+{
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -9,8 +15,11 @@
   <body>
     <?php include "header.php"; ?>
 
-<p>Accueil !!!</p>
+    <h2>Bienvenue <?php echo $_SESSION['pseudo'] ?></h2>
 
     <?php include "footer.php"; ?>
   </body>
 </html>
+<?php } else {
+  header("Location: index.php"); //à la fin de la page après la balise html
+ } ?>

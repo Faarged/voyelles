@@ -7,7 +7,7 @@ $pass = isset($_POST['pass1']) ? $_POST['pass1'] : NULL;
 
 
 //  Récupération de l'utilisateur et de son pass hashé
-$req = $bdd->prepare('SELECT id, pass FROM users WHERE pseudo = :pseudo');
+$req = $bdd->prepare('SELECT id, pass FROM users WHERE pseudo = :pseudo OR carte = :pseudo');
 $req->execute(array(
     'pseudo' => $pseudo));
 $resultat = $req->fetch();
@@ -30,6 +30,6 @@ else
     }
     else {
         echo 'Mauvais identifiant ou mot de passe !';
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
 }
