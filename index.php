@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <?php include "header.php"; ?>
 
-<p>Hello World !!!</p>
 
-    <?php include "footer.php"; ?>
+<div class="formulaire_co">
+  <form class="formulaire_co" method="POST" action="php/connect.php">
+    <input type="text" id="pseudo1" name="pseudo1" placeholder="Pseudo" />
+    <input type="password" id="pass1" name="pass1" placeholder="Mdp" />
+    <button>Connexion</button>
+  </form>
+</div>
+
+
   </body>
 </html>
