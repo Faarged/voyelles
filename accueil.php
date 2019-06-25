@@ -22,7 +22,22 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
       <a href="crea_compte.php">Créer un nouveau compte</a>
       <a href="crea_materiel.php">Créer un nouveau matériel</a>
     </section>
-
+    <section>
+      <table>
+        <tr>
+          <td>Nom</td>
+          <td>Prenom</td>
+          <td>Carte</td>
+        </tr>
+        <?php //appel bdd ?>
+        <tr>
+          <td><?php echo $donnees["nom"]; ?></td>
+          <td><?php echo $donnees["prenom"]; ?></td>
+          <td><?php echo $donnees["carte"]; ?></td>
+        </tr>
+        <?php //fin appel ?>
+      </table>
+    </section>
 
     <?php include "footer.php"; ?>
   </body>
