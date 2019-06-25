@@ -14,15 +14,15 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
   </head>
   <body>
     <?php include "header.php"; ?>
-    <section>
+    <div>
       <h1>Accueil</h1>
       <h2>Bienvenue <?php echo $_SESSION['pseudo'] ?></h2>
-    </section>
-    <section>
+    </div>
+    <div>
       <a href="crea_compte.php">Créer un nouveau compte</a>
       <a href="crea_materiel.php">Créer un nouveau matériel</a>
-    </section>
-    <section>
+    </div>
+    <div class="prochains_departs">
       <table>
         <tr>
           <td>Nom</td>
@@ -38,6 +38,15 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
       <?php }
       //fin appel ?>
       </table>
+    </div>
+    <section>
+      <h3>Brèves</h3>
+      <div class="breve">
+        <?php require 'php/requetes/breve_accueil.php'; ?>
+        <h4><?php echo $donnees['titre_breves']; ?></h4>
+        <p><?php echo $donnees['contenu_breves']; ?></p>
+      <?php } ?>
+      </div>
     </section>
 
     <?php include "footer.php"; ?>
