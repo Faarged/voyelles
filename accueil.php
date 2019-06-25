@@ -29,13 +29,14 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
           <td>Prenom</td>
           <td>Carte</td>
         </tr>
-        <?php //appel bdd ?>
+        <?php require 'php/requete_user.php';//appel bdd ?>
         <tr>
-          <td><?php echo $donnees["nom"]; ?></td>
-          <td><?php echo $donnees["prenom"]; ?></td>
-          <td><?php echo $donnees["carte"]; ?></td>
+          <td><?php echo $resultat["nom"]; ?></td>
+          <td><?php echo $resultat["prenom"]; ?></td>
+          <td><?php echo $resultat["carte"]; ?></td>
         </tr>
-        <?php //fin appel ?>
+      <?php }
+      //fin appel ?>
       </table>
     </section>
 
