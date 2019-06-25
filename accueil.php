@@ -29,26 +29,24 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
           <td>Prenom</td>
           <td>Carte</td>
         </tr>
-        <?php require 'php/requetes/requete_user.php';//appel bdd ?>
+        <?php include 'php/requetes/requete_user.php';//appel bdd
+          while ($donnees = $reponse->fetch()){ ?>
         <tr>
           <td><?php echo $donnees["nom"]; ?></td>
           <td><?php echo $donnees["prenom"]; ?></td>
           <td><?php echo $donnees["carte"]; ?></td>
         </tr>
-      <?php }
-       $reponse->closeCursor();
-      //fin appel ?>
+      <?php } ?>
       </table>
     </div>
     <section>
       <h3>Brèves</h3>
       <div class="breve">
-        <?php require 'php/requetes/breve_accueil.php'; ?>
+        <?php include 'php/requetes/breve_accueil.php';
+          while ($donnees = $reponse->fetch()){ ?>
         <h4><?php echo $donnees['titre_breves']; ?></h4>
         <p><?php echo $donnees['contenu_breves']; ?></p>
-      <?php }
-       $reponse->closeCursor();
-        ?>
+      <?php } ?>
       </div>
     </section>
 
