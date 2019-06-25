@@ -1,4 +1,4 @@
-<?php //doit être placé en début de page, avant le doctype
+<?php
 session_start();
 if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
 {
@@ -36,6 +36,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
           <td><?php echo $donnees["carte"]; ?></td>
         </tr>
       <?php }
+       $reponse->closeCursor();
       //fin appel ?>
       </table>
     </div>
@@ -45,7 +46,9 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
         <?php require 'php/requetes/breve_accueil.php'; ?>
         <h4><?php echo $donnees['titre_breves']; ?></h4>
         <p><?php echo $donnees['contenu_breves']; ?></p>
-      <?php } ?>
+      <?php }
+       $reponse->closeCursor();
+        ?>
       </div>
     </section>
 
