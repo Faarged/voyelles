@@ -31,9 +31,9 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
         </tr>
         <?php require 'php/requete_user.php';//appel bdd ?>
         <tr>
-          <td><?php echo $resultat["nom"]; ?></td>
-          <td><?php echo $resultat["prenom"]; ?></td>
-          <td><?php echo $resultat["carte"]; ?></td>
+          <td><?php echo $donnees["nom"]; ?></td>
+          <td><?php echo $donnees["prenom"]; ?></td>
+          <td><?php echo $donnees["carte"]; ?></td>
         </tr>
       <?php }
       //fin appel ?>
