@@ -14,8 +14,15 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
   </head>
   <body>
     <?php include "header.php"; ?>
+    <section>
+      <h1>Accueil</h1>
+      <h2>Bienvenue <?php echo $_SESSION['pseudo'] ?></h2>
+    </section>
+    <section>
+      <a href="crea_compte.php">Créer un nouveau compte</a>
+      <a href="crea_materiel.php">Créer un nouveau matériel</a>
+    </section>
 
-    <h2>Bienvenue <?php echo $_SESSION['pseudo'] ?></h2>
 
     <?php include "footer.php"; ?>
   </body>
