@@ -18,8 +18,7 @@
       <label for="date_naissance">Date de naissance</label>
         <input type="date" class="date_naissance" name="date_naissance">
       <label for="date_inscription">Date d'inscription</label>
-        <input type="date" class="date_inscription" name="date_inscription"
-        value="<?php echo date('Y.d.m'); ?>">
+        <input type="date" class="date_inscription" name="date_inscription">
       <label for="pseudo">Pseudo</label>
         <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
       <label for="carte">Numéro de carte</label>
@@ -46,8 +45,7 @@
             <p>Administrateur</p>
         </div>
       <label for="fin_inscription">Date de fin de l'abonnement</label>
-        <input type="date" name="fin_inscription" class="fin_inscription"
-        value="<?php echo date('Y.d.m', strtotime('+1 year')); ?>">
+        <input type="date" name="fin_inscription" class="fin_inscription">
       <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>
     </form>
     <?php include "footer.php"; ?>
