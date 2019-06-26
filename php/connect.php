@@ -7,7 +7,7 @@ $pass = isset($_POST['pass1']) ? $_POST['pass1'] : NULL;
 
 
 //  Récupération de l'utilisateur et de son pass hashé
-$req = $bdd->prepare('SELECT id_user, pass FROM users WHERE pseudo = :pseudo OR carte = :pseudo');
+$req = $bdd->prepare('SELECT id_user, pass, statut FROM users WHERE pseudo = :pseudo OR carte = :pseudo');
 $req->execute(array(
     'pseudo' => $pseudo));
 $resultat = $req->fetch();
@@ -26,6 +26,7 @@ else
         session_start();
         $_SESSION['id'] = $resultat['id_user'];
         $_SESSION['pseudo'] = $pseudo;
+        $_SESSION['statut'] = $resultat['statut'];
         header("Location: ../accueil.php");
     }
     else {

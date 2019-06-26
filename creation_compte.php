@@ -1,4 +1,8 @@
-
+<?php
+  session_start();
+  if ($_SESSION['statut'] == 'administrateur')
+  {
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -51,3 +55,6 @@
     <?php include "footer.php"; ?>
   </body>
 </html>
+<?php } else {
+  header("Location: accueil.php"); //à la fin de la page après la balise html
+ } ?>

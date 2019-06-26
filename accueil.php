@@ -16,7 +16,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
     <?php include "header.php"; ?>
     <div>
       <h1>Accueil</h1>
-      <h2>Bienvenue <?php echo $_SESSION['pseudo'] ?></h2>
+      <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
     </div>
     <div>
       <a href="creation_compte.php">Créer un nouveau compte</a>
