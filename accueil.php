@@ -19,7 +19,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
       <h2>Bienvenue <?php echo $_SESSION['pseudo'] ?></h2>
     </div>
     <div>
-      <a href="crea_compte.php">Créer un nouveau compte</a>
+      <a href="creation_compte.php">Créer un nouveau compte</a>
       <a href="crea_materiel.php">Créer un nouveau matériel</a>
     </div>
     <div class="prochains_departs">
