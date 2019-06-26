@@ -22,7 +22,7 @@ if (!$resultat)
 }
 else
 {
-    if ($pass = $resultat["pass"]) {
+    if ($isPasswordCorrect) {
         session_start();
         $_SESSION['id'] = $resultat['id_user'];
         $_SESSION['pseudo'] = $pseudo;

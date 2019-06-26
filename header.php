@@ -8,11 +8,9 @@
       <a href="accueil.php">Accueil</a> -
       <a href="mon_compte.php?id=<?php echo $_SESSION['id']; ?>">Mon compte</a> -
       <a href="#">Mes réservations</a> -
-      <a href="php/deco.php"><i class="fas fa-sign-out-alt">Déconnecter <?php
-                      if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
-                      {
-                          echo $_SESSION['pseudo'];
-                      } ?></i></a>
+      <a href="php/deco.php">
+        <i class="fas fa-sign-out-alt">Déconnecter <?php echo $_SESSION['pseudo'];?></i>
+      </a>
   </center>
   <hr>
 

@@ -44,10 +44,6 @@
         <td><?php echo $donnees['carte']; ?></td>
       </tr>
       <tr>
-        <td>Mot de passe:</td>
-        <td><?php echo $donnees['pass']; ?></td>
-      </tr>
-      <tr>
         <td>PEGI:</td>
         <td><?php echo $donnees['pegi']; ?></td>
       </tr>
@@ -61,6 +57,14 @@
       </tr>
     <?php } ?>
     </table>
+    <form class="chgt_pass" action="php/requetes/chgt_pass.php" method="post">
+      <h2>Changement de mot de passe:</h2>
+      <label for="pass">Nouveau mot de passe:</label>
+        <input type="text" name="pass" class="pass" placeholder="mot de passe">
+      <label for="confirm_pass">Confirmation du nouveau mot de passe</label>
+        <input type="text" name="confirm_pass" class="pass" placeholder="mot de passe">
+      <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>
+    </form>
     <?php include "footer.php"; ?>
   </body>
 </html>
