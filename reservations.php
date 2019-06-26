@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']) AND $SESSION['statut'] == 'adherent')
+if ($_SESSION['statut'] == 'adherent')
 {
 ?>
 <!DOCTYPE html>

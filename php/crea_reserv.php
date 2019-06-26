@@ -20,8 +20,11 @@
       'duree' => $duree,
       'materiel' => $materiel
     ));
-    $recup = $bdd->prepare('SELECT id_resa FROM reservation
-      WHERE date_resa ='.$date_resa.' AND debut_resa='.$debut_resa.'AND materiel_res='.$materiel);
+    $recup = $bdd->prepare("SELECT id_resa FROM reservation
+      WHERE date_resa ='".$date_resa."'
+      AND debut_resa='".$debut_resa."'
+      AND duree='".$duree."' 
+      AND materiel_res='".$materiel."'");
     $recup->execute();
     while ($my_id = $recup->fetch()){
       $id_re = $my_id['id_resa'];
@@ -32,7 +35,7 @@
         'id_res' => $id_re,
         'id_use' => $id_use
       ));
-
+      header('Location: ../reservations.php')
 
 
 ?>
