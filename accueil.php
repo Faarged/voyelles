@@ -14,6 +14,9 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
   </head>
   <body>
     <?php include "header.php"; ?>
+    <?php include "navadmin.php" ?>
+
+    <center>
     <div>
       <h1>Accueil</h1>
       <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
@@ -49,7 +52,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
       <?php } ?>
       </div>
     </section>
-
+</center>
     <?php include "footer.php"; ?>
   </body>
 </html>
