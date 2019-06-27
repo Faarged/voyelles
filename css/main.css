@@ -71,13 +71,14 @@ header > p {
 }
 /* fin du style avec hover */
 /* fin de la barre de navigation du header */
-
+.corps{
+  display: flex;
+  flex-flow: row wrap;
+}
 /* début de la navadmin */
 
 nav {
-  margin-top: 240px;
-  margin-left: 20px;
-  position: absolute;
+  
 }
 
 li {

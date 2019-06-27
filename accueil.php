@@ -15,45 +15,46 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
   </head>
   <body>
     <?php include "header.php"; ?>
-    <?php include "navadmin.php" ?>
-
-    <center>
-    <div>
-      <h1>Accueil</h1>
-      <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
-    </div>
-    <div>
-      <a href="creation_compte.php">Créer un nouveau compte</a>
-      <a href="crea_materiel.php">Créer un nouveau matériel</a>
-    </div>
-    <div class="prochains_departs">
-      <table>
-        <tr>
-          <td>Nom</td>
-          <td>Prenom</td>
-          <td>Carte</td>
-        </tr>
-        <?php include 'php/requetes/requete_user.php';//appel bdd
-          while ($donnees = $reponse->fetch()){ ?>
-        <tr>
-          <td><?php echo $donnees["nom"]; ?></td>
-          <td><?php echo $donnees["prenom"]; ?></td>
-          <td><?php echo $donnees["carte"]; ?></td>
-        </tr>
-      <?php } ?>
-      </table>
-    </div>
-    <section>
-      <h3>Brèves</h3>
-      <div class="breve">
-        <?php include 'php/requetes/breve_accueil.php';
-          while ($donnees = $reponse->fetch()){ ?>
-        <h4><?php echo $donnees['titre_breves']; ?></h4>
-        <p><?php echo $donnees['contenu_breves']; ?></p>
-      <?php } ?>
+    <div class="corps">
+      <?php include "navadmin.php" ?>
+      <div class="accueil">
+      <div>
+        <h1>Accueil</h1>
+        <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
       </div>
-    </section>
-</center>
+      <div>
+        <a href="creation_compte.php">Créer un nouveau compte</a>
+        <a href="crea_materiel.php">Créer un nouveau matériel</a>
+      </div>
+      <div class="prochains_departs">
+        <table>
+          <tr>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Carte</td>
+          </tr>
+          <?php include 'php/requetes/requete_user.php';//appel bdd
+            while ($donnees = $reponse->fetch()){ ?>
+          <tr>
+            <td><?php echo $donnees["nom"]; ?></td>
+            <td><?php echo $donnees["prenom"]; ?></td>
+            <td><?php echo $donnees["carte"]; ?></td>
+          </tr>
+        <?php } ?>
+        </table>
+      </div>
+      <section>
+        <h3>Brèves</h3>
+        <div class="breve">
+          <?php include 'php/requetes/breve_accueil.php';
+            while ($donnees = $reponse->fetch()){ ?>
+          <h4><?php echo $donnees['titre_breves']; ?></h4>
+          <p><?php echo $donnees['contenu_breves']; ?></p>
+        <?php } ?>
+        </div>
+      </section>
+      </div>
+    </div>
     <?php include "footer.php"; ?>
   </body>
 </html>
