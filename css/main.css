@@ -51,6 +51,11 @@ header > p {
 /* fin du CSS pour le titre du header */
 
 /* barre de navigation du header */
+.navbar{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
 /* style des liens par defaut*/
 .nav > a{
   color: black;

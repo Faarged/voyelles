@@ -10,6 +10,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+    <link rel="stylesheet" href="css/fontawesome-5.9.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
