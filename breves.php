@@ -14,7 +14,7 @@
     <?php include "header.php"; ?>
     <div class="">
       <h1>Brèves</h1>
-      <a href="#">Création de brève</a>
+      <a href="creation_breve.php">Création de brève</a>
     </div>
     <?php include "php/requetes/liste_breves.php";
     while ($donnees = $reponse->fetch()){
