@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/fontawesome-5.9.0/css/all.min.css">
 <header>
   <p>ESPACE<strong>NUMERIQUE</strong><p>
   <hr>
@@ -13,5 +11,4 @@
       </a>
   </div>
   <hr>
-
 </header>

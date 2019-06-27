@@ -6,6 +6,7 @@
   <head>
     <meta charset="utf-8">
     <title>Liste des administrateurs</title>
+    <link rel="stylesheet" href="css/fontawesome-5.9.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
