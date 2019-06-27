@@ -21,7 +21,14 @@
     ?>
     <div class="breve">
       <h3><?php echo $donnees['titre_breves']; ?></h3>
-      <p><?php echo $donnees['contenu_breves']; ?></p>
+      <p>
+        <?php
+        echo $donnees['contenu_breves'];
+        ?>
+      </p>
+      <h5>
+        Supprimer cette brève: <a href='php/requetes/trash_breve.php?del=<?php echo $donnees['id_breves']; ?>'><i class="fas fa-trash-alt"></i></a>;
+      </h5>
     </div>
   <?php } ?>
     <?php include "footer.php"; ?>
