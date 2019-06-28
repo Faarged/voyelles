@@ -3,14 +3,16 @@
   if ($_SESSION['statut'] == 'administrateur'){
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Matériel</title>
+    <link rel="stylesheet" href="css/fontawesome-5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <?php include "header.php"; ?>
-    <div class="">
+    <div class="matos">
       <h1>Liste du matériel</h1>
       <a href="crea_materiel.php">Ajouter du matériel</a>
       <table>
@@ -35,4 +37,5 @@
 </html>
 <?php }else{
   header('Location: index.php');
+}
 ?>
