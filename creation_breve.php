@@ -14,10 +14,10 @@
     <?php include "header.php"; ?>
     <h1>Rédaction de brève</h1>
     <form class="crea_breve" action="php/crea_breve.php" method="post">
-      <label for="titre">Titre</label>
+      <label for="titre">Titre:</label>
         <input type="text" name="titre" placeholder="Titre">
-      <label for="contenu">Contenu</label>
-        <textarea name="contenu" rows="8" cols="80"></textarea>
+      <label for="contenu">Contenu:</label>
+        <textarea name="contenu" rows="8" cols="60"></textarea>
       <button type="submit" name="submit">Valider</button>
     </form>
     <?php include "footer.php"; ?>
