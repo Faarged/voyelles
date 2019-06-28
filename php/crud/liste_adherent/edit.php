@@ -1,6 +1,6 @@
 <?php
 // including the database connection file
-include_once("config.php");
+include("../config.php");
 
 if(isset($_POST['update']))
 {
@@ -75,7 +75,7 @@ $id = $_GET['id'];
 //selecting data associated with this particular id
 $sql = "SELECT * FROM users WHERE id_user=:id";
 $query = $dbConn->prepare($sql);
-$query->execute(array(':id' => $id));
+$query->execute(array('id' => $id));
 
 while($row = $query->fetch(PDO::FETCH_ASSOC))
 {

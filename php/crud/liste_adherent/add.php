@@ -6,7 +6,7 @@
 <body>
 <?php
 //including the database connection file
-include_once("config.php");
+include_once("../config.php");
 
 if(isset($_POST['Submit'])) {
 	$nom = $_POST['nom'];
