@@ -6,7 +6,7 @@
       <li><a href="liste_adherents.php">Adhérents</a></li>
       <li><a href="liste_admin.php">Administrateurs</a></li>
       <li><a href="breves.php">Brèves</a></li>
-      <li><a href="#">Matériel</a></li>
+      <li><a href="materiel.php">Matériel</a></li>
       <li><a href="#">Configuration</a></li>
       <li><a href="#">Statistiques</a></li>
     <ul>
