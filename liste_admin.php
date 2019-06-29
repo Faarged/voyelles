@@ -41,7 +41,7 @@
             <td><?php echo $donnees['pegi']; ?></td>
             <td><?php echo $donnees['fin_inscription']; ?></td>
             <td><i class="fas fa-cogs"></i></td>
-            <td><i class="fas fa-trash-alt"></i></td>
+            <td><a href="php/crud/liste_adherent/delete.php?id=<?php echo $donnees['id_user']; ?>" onClick="return confirm('Etes vous certain de vouloir supprimer cet utilisateur?')"><i class="fas fa-trash-alt"></i></a></td>
           </tr>
         <?php } ?>
         </table>
