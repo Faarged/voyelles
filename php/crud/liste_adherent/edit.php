@@ -1,4 +1,4 @@
-<?php echo 'coucou';
+<?php
 // including the database connection file
 include_once("config.php");
 
@@ -8,7 +8,7 @@ if(isset($_POST['update']))
 
 	$name=$_POST['name'];
 	$age=$_POST['age'];
-	$email=$_POST['email'];	
+	$email=$_POST['email'];
 
 	// checking empty fields
 	if(empty($name) || empty($age) || empty($email)) {
