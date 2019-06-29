@@ -1,5 +1,6 @@
 <?php
 session_start();
+if ($_SESSION['statut'] == 'administrateur'){
 require "php/connex_bdd.php";
 //getting id from url
 $id = $_GET['id'];
@@ -77,3 +78,6 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))
 	</form>
 </body>
 </html>
+<?php }else{
+  header('Location: index.php');
+?>
