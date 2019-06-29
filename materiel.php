@@ -27,7 +27,7 @@
         <tr>
           <td><?php echo $donnees['nom_materiel']; ?></td>
           <td><?php echo $donnees['type']; ?></td>
-          <td><i class="fas fa-trash-alt"></i></td>
+          <td><a href="php/crud/suppression/suppr_materiel.php?id=<?php echo $donnees['id_materiel']; ?>" onClick="return confirm('Etes vous certain de vouloir supprimer cet utilisateur?')"><i class="fas fa-trash-alt"></i></a></td>
         </tr>
         <?php } ?>
       </table>

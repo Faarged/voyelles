@@ -9,5 +9,5 @@
     'nom' => $nom,
     'type' => $type
   ));
-  header('Location: ../crea_materiel.php');
+  header('Location: ../materiel.php');
 ?>
