@@ -36,6 +36,7 @@ $result = $dbConn->query('SELECT * FROM users WHERE statut = "adherent"');
         <td>prenom</td>
         <td>date_naissance</td>
         <td>date_inscription</td>
+        <td>statut</td>
         <td>pseudo</td>
         <td>carte</td>
         <td>pegi</td>
@@ -49,6 +50,7 @@ $result = $dbConn->query('SELECT * FROM users WHERE statut = "adherent"');
             		echo "<td>".$row['prenom']."</td>";
             		echo "<td>".$row['date_naissance']."</td>";
             		echo "<td>".$row['date_inscription']."</td>";
+            		echo "<td>".$row['statut']."</td>";
             		echo "<td>".$row['pseudo']."</td>";
             		echo "<td>".$row['carte']."</td>";
             		echo "<td>".$row['pegi']."</td>";
