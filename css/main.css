@@ -71,6 +71,7 @@ header > p {
 }
 /* fin du style avec hover */
 /* fin de la barre de navigation du header */
+/*Placement nav admin*/
 .corps{
   display: flex;
   flex-flow: row wrap;
@@ -78,7 +79,7 @@ header > p {
 /* début de la navadmin */
 
 nav {
-  
+  max-width: 20%;
 }
 
 li {
@@ -86,3 +87,8 @@ li {
 }
 
 /*////////////////////////// fin header ////////////////////////////////////*/
+.contenu{
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+}

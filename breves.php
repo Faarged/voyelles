@@ -12,25 +12,30 @@
   </head>
   <body>
     <?php include "header.php"; ?>
-    <div class="">
-      <h1>Brèves</h1>
-      <a href="creation_breve.php">Création de brève</a>
-    </div>
-    <?php include "php/requetes/liste_breves.php";
-    while ($donnees = $reponse->fetch()){
-    ?>
-    <div class="breve">
-      <h3><?php echo $donnees['titre_breves']; ?></h3>
-      <p>
-        <?php
-        echo $donnees['contenu_breves'];
+    <div class="corps">
+      <?php include "navadmin.php" ?>
+      <div class="contenu">
+        <div>
+          <h1>Brèves</h1>
+          <a href="creation_breve.php">Création de brève</a>
+        </div>
+        <?php include "php/requetes/liste_breves.php";
+        while ($donnees = $reponse->fetch()){
         ?>
-      </p>
-      <h5>
-        Supprimer cette brève: <a href='php/crud/suppression/trash_breve.php?del=<?php echo $donnees['id_breves']; ?>'><i class="fas fa-trash-alt"></i></a>;
-      </h5>
+        <div class="breve">
+          <h3><?php echo $donnees['titre_breves']; ?></h3>
+          <p>
+            <?php
+            echo $donnees['contenu_breves'];
+            ?>
+          </p>
+          <h5>
+            Supprimer cette brève: <a href='php/crud/suppression/trash_breve.php?del=<?php echo $donnees['id_breves']; ?>'><i class="fas fa-trash-alt"></i></a>;
+          </h5>
+        </div>
+      </div>
+      <?php } ?>
     </div>
-  <?php } ?>
     <?php include "footer.php"; ?>
   </body>
 </html>

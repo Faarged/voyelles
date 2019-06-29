@@ -2,8 +2,8 @@
 
 $databaseHost = 'localhost';
 $databaseName = 'consonne';
-$databaseUsername = 'root';
-$databasePassword = '';
+$databaseUsername = 'lilian';
+$databasePassword = '21septembre';
 
 try {
 	// http://php.net/manual/en/pdo.connections.php
