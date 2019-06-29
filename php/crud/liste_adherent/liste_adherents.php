@@ -53,7 +53,7 @@ $result = $dbConn->query('SELECT * FROM users WHERE statut = "adherent"');
             		echo "<td>".$row['carte']."</td>";
             		echo "<td>".$row['pegi']."</td>";
             		echo "<td>".$row['fin_inscription']."</td>";
-            		echo "<td><a href=\"edit.php?id=$row[id_user]\">Edit</a> | <a href=\"delete.php?id=$row[id_user]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+            		echo "<td><a href=\"edit.php?id=$row[id_user]\"><i class=\"fas fa-cogs\"></i></a> | <a href=\"delete.php?id=$row[id_user]\" onClick=\"return confirm('Etes vous certain de vouloir supprimer cet utilisateur?')\"><i class=\"fas fa-trash-alt\"></i></a></td>";
             	}
             	?>
     </table>
