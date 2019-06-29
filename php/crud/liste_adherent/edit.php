@@ -1,4 +1,4 @@
-<?php
+<?php echo 'coucou';
 // including the database connection file
 include("../config.php");
 

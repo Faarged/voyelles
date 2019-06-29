@@ -27,7 +27,7 @@
         ?>
       </p>
       <h5>
-        Supprimer cette brève: <a href='php/requetes/trash_breve.php?del=<?php echo $donnees['id_breves']; ?>'><i class="fas fa-trash-alt"></i></a>;
+        Supprimer cette brève: <a href='php/crud/suppression/trash_breve.php?del=<?php echo $donnees['id_breves']; ?>'><i class="fas fa-trash-alt"></i></a>;
       </h5>
     </div>
   <?php } ?>
