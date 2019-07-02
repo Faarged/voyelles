@@ -31,16 +31,8 @@ require "php/crud/edit/requete_edit.php";
 						<td><input type="text" name="prenom" value="<?php echo $prenom;?>"></td>
 					</tr>
 					<tr>
-						<td>Date de naissance</td>
-						<td><input type="date" name="date_naissance" value="<?php echo $date_naissance;?>"></td>
-					</tr>
-					<tr>
 						<td>Date d'inscription</td>
 						<td><input type="date" name="date_inscription" value="<?php echo $date_inscription;?>"></td>
-					</tr>
-					<tr>
-						<td>Statut</td>
-						<td><input type="text" name="statut" value="<?php echo $statut;?>"></td>
 					</tr>
 					<tr>
 						<td>Pseudo</td>
