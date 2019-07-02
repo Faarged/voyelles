@@ -92,3 +92,10 @@ li {
   flex: 1;
   flex-flow: column;
 }
+
+.accueil{
+  display: flex;
+  flex: 1;
+  max-width: 70%;
+  flex-flow: column;
+}

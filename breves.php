@@ -33,8 +33,8 @@
             Supprimer cette brève: <a href='php/crud/suppression/trash_breve.php?del=<?php echo $donnees['id_breves']; ?>'><i class="fas fa-trash-alt"></i></a>;
           </h5>
         </div>
+        <?php } ?>
       </div>
-      <?php } ?>
     </div>
     <?php include "footer.php"; ?>
   </body>
