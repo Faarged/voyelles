@@ -71,6 +71,7 @@ if ($_SESSION['statut'] == 'adherent')
               <td>Heure de début</td>
               <td>Temps de réservation</td>
               <td>Matériel réservé</td>
+              <td>Edition de la durée</td>
             </tr>
             <?php include "php/requetes/resa_journalieres.php";
             while ($donnees = $reponse->fetch()){ ?>
@@ -80,6 +81,7 @@ if ($_SESSION['statut'] == 'adherent')
               <td><?php echo $donnees['debut_resa']; ?></td>
               <td><?php echo $donnees['duree'] ?></td>
               <td><?php echo $donnees['materiel_res'] ?></td>
+              <td><a href="edit_reserv.php?id=<?php echo $donnees['id_resa']; ?>"><i class="fas fa-cogs"></i></a></td>
             </tr>
             <?php } ?>
           </table>
