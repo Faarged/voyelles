@@ -26,7 +26,7 @@
           <label for="date_naissance">Date de naissance</label>
             <input type="date" class="date_naissance" name="date_naissance">
           <label for="date_inscription">Date d'inscription</label>
-            <input type="date" class="date_inscription" name="date_inscription">
+            <input type="date" class="date_inscription" name="date_inscription" value="<?php echo date('Y-m-d'); ?>">
           <label for="pseudo">Pseudo</label>
             <input type="text" name="pseudo" class="pseudo" placeholder="pseudo">
           <label for="carte">Numéro de carte</label>

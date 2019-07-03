@@ -55,11 +55,11 @@ if ($_SESSION['statut'] == 'adherent')
             <label for="carte">Numéro de carte</label>
               <input type="text" name="carte1" placeholder="numéro de carte">
             <label for="date_resa1">Date de réservation</label>
-              <input type="date" name="date_resa1" placeholder="date">
+              <input type="date" name="date_resa1" value="<?php echo date('Y-m-d'); ?>">
             <label for="debut_resa1">Début de la réservation</label>
-              <input type="time" name="debut_resa1" placeholder="Heure de début">
+              <input type="time" name="debut_resa1" min='10:00' max='17:45' step='900' value="<?php echo date('H:i'); ?>">
             <label for="duree1">Temps de réservation</label>
-              <input type="time" name="duree1" placeholder="Durée">
+              <input type="time" name="duree1" step='900'>
             <label for="materiel1">Matériel réservé</label>
               <input type="text" name="materiel1" placeholder="Matériel">
             <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>

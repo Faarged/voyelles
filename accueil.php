@@ -30,6 +30,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
             <td>Nom</td>
             <td>Prenom</td>
             <td>Carte</td>
+            <td>Début de la réservation</td>
           </tr>
           <?php include 'php/requetes/requete_user.php';//appel bdd
             while ($donnees = $reponse->fetch()){ ?>
@@ -37,6 +38,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
             <td><?php echo $donnees["nom"]; ?></td>
             <td><?php echo $donnees["prenom"]; ?></td>
             <td><?php echo $donnees["carte"]; ?></td>
+            <td><?php echo $donnees['debut_resa']; ?></td>
           </tr>
         <?php } ?>
         </table>
