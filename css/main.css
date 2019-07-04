@@ -48,6 +48,10 @@ html, body {
   padding: 0;
   margin: 0;
 }
+
+hr{
+  
+}
 /*////////////////////////// Fin de l'intro ////////////////////////////////////*/
 
 /*////////////////////////// 2) header ////////////////////////////////////*/
@@ -93,16 +97,22 @@ nav {
   max-width: 20%;
 }
 
+.navadmin{
+  border: solid 1px #5DB3A4;
+  box-shadow: 2px 2px 5px #B3826F;
+  padding-left: 0.5em;
+}
 /*////////////////////////// fin header ////////////////////////////////////*/
 
 .contenu{
+  padding-left: 1em;
   display: flex;
   flex: 1;
   flex-flow: column;
 }
 
 .accueil{
-  padding-left: 25%;
+  padding-left: 15%;
   display: flex;
   flex: 1;
   max-width: 70%;

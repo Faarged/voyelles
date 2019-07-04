@@ -1,5 +1,5 @@
 <header>
-  <p>ESPACE<strong>NUMERIQUE</strong><p>
+  <p>ESPACE<strong>NUMERIQUE</strong></p>
   <hr>
   <div class="navbar">
     <p class="nav">
@@ -9,6 +9,7 @@
       <a href="php/deco.php">
         <i class="fas fa-sign-out-alt">Déconnecter <?php echo $_SESSION['pseudo'];?></i>
       </a>
+    </p>
   </div>
   <hr>
 </header>
