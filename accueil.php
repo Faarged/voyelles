@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
+if ($_SESSION['statut'] == 'administrateur'){
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -58,6 +58,35 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
     <?php include "footer.php"; ?>
   </body>
 </html>
+<?php }elseif($_SESSION['statut'] == 'adherent'){ ?>
+  <!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Accueil</title>
+      <link rel="stylesheet" href="css/fontawesome-5.9.0/css/all.min.css">
+      <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+      <?php include "header.php"; ?>
+      <div>
+        <h1>Accueil</h1>
+        <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
+      </div>
+      <section>
+        <h3>Brèves</h3>
+        <div class="breve">
+          <?php include 'php/requetes/breve_accueil.php';
+            while ($donnees = $reponse->fetch()){ ?>
+          <h4><?php echo $donnees['titre_breves']; ?></h4>
+          <p><?php echo $donnees['contenu_breves']; ?></p>
+        <?php } ?>
+        </div>
+      </section>
+      <?php include "footer.php"; ?>
+    </body>
+  </html>
 <?php } else {
   header("Location: index.php"); //à la fin de la page après la balise html
  } ?>
