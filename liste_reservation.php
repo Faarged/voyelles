@@ -14,6 +14,8 @@ if ($_SESSION['statut'] == 'administrateur')
   </head>
   <body>
     <?php include "header.php"; ?>
+    <div class="corps">
+      <?php include 'navadmin.php'; ?>
       <div class="contenu">
         <h1>Liste réservations</h1>
         <table>
@@ -39,6 +41,7 @@ if ($_SESSION['statut'] == 'administrateur')
           <?php } ?>
         </table>
       </div>
+    </div>
     <?php include "footer.php"; ?>
   </body>
 </html>
