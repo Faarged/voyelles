@@ -6,15 +6,15 @@ Par exemple si vous voulez supprimer le header faites un CTRL + F et rechercher
 "1) header" vous n'aurez plus qu'à trouver l'élément à modifier
 dans la section header !
 
-1) header
-2)
+1) intro
+2) header
 3)
 4)
 5)
 
 Merci d'utiliser COSP et de faire vivre ce programme !
 */
-
+/*////////////////////////// 1) intro ////////////////////////////////////*/
 html {
   margin: 0;
   padding: 0;
@@ -22,12 +22,25 @@ html {
   font-family: 'Arial', sans-serif;
 }
 
-
-
 body {
+  background-color: #00FFFF;
   margin: 0px;
   display: flex;
   flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: red
+}
+
+a:hover {
+  text-decoration: underline;
+  color: red
+}
+
+h1 {
+  color: #B3826F;
 }
 
 html, body {
@@ -35,11 +48,9 @@ html, body {
   padding: 0;
   margin: 0;
 }
+/*////////////////////////// Fin de l'intro ////////////////////////////////////*/
 
-footer {
-  margin-top: auto;
-}
-/*////////////////////////// 1) header ////////////////////////////////////*/
+/*////////////////////////// 2) header ////////////////////////////////////*/
 /* section déstiné à l'header et le panel de navigation admin du coté */
 
 /* titre du header */
@@ -82,11 +93,8 @@ nav {
   max-width: 20%;
 }
 
-li {
-
-}
-
 /*////////////////////////// fin header ////////////////////////////////////*/
+
 .contenu{
   display: flex;
   flex: 1;
@@ -94,8 +102,15 @@ li {
 }
 
 .accueil{
+  padding-left: 25%;
   display: flex;
   flex: 1;
   max-width: 70%;
   flex-flow: column;
 }
+
+/*////////////////////////// X) Footer ////////////////////////////////////*/
+footer {
+  margin-top: auto;
+}
+/*////////////////////////// Fin du footer ////////////////////////////////////*/
