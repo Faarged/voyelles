@@ -34,6 +34,11 @@ a {
   color: red
 }
 
+hr {
+  background-color: black;
+  color: black;
+}
+
 a:hover {
   text-decoration: underline;
   color: red
@@ -50,7 +55,7 @@ html, body {
 }
 
 hr{
-  
+
 }
 /*////////////////////////// Fin de l'intro ////////////////////////////////////*/
 
