@@ -10,6 +10,8 @@
 
 
 <div class="formulaire_co">
+
+    <img src="img/logo.png" alt="">
   <form class="formulaire_co" method="POST" action="php/connect.php">
     <label>Entrez votre pseudo ou n° de carte:</label>
     <input type="text" id="pseudo1" name="pseudo1" placeholder="Pseudo" />
