@@ -77,6 +77,14 @@ header > p {
   text-align: right;
   }
 
+.head {
+  margin-left: 5%;
+  }
+
+.head {
+  margin-right: 5%;
+  }
+
 .head > p {
     font-size: 2em;
 }
@@ -153,7 +161,8 @@ form{
   flex-flow: column;
   justify-content: center;
 }
-.pegi{
+
+.radio{
   display: flex;
   flex-flow: row wrap;
 }

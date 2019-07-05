@@ -1,7 +1,7 @@
 <header>
   <div class="head">
   <p>ESPACE<strong>NUMERIQUE</strong></p>
-    <div>
+    <div class="head2">
   <img src="img/logo.png" width="50%" alt="">
   </div>
 </div>

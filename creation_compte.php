@@ -35,18 +35,18 @@
             <input type="text" name="pass" class="pass" placeholder="mot de passe">
           <!--pegi, statut, date de fin -->
           <label for="pegi">PEGI</label>
-            <div class="pegi">
+            <div class="radio">
               <input type="radio" id="option1" autocomplete="off" name="pegi" value="6">
-                <p>PEGI 6</p>
+                <p>6</p>
               <input type="radio" id="option2" autocomplete="off" name="pegi" value="9">
-                <p>PEGI 9</p>
+                <p>9</p>
               <input type="radio" id="option3" autocomplete="off" name="pegi" value="12">
-                <p>PEGI 12</p>
+                <p>12</p>
               <input type="radio" id="option4" autocomplete="off" name="pegi" value="18">
-                <p>PEGI 18</p>
+                <p>18</p>
             </div>
-          <label for="statut">Statut</label>
-            <div class="statut">
+              <div class="radio">
+          <label for="statut">STATUT</label>
               <input type="radio" id="option1" autocomplete="off" name="statut" value="adherent">
                 <p>Adhérent</p>
               <input type="radio" id="option2" autocomplete="off" name="statut" value="administrateur">
