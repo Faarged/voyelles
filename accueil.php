@@ -76,6 +76,22 @@ if ($_SESSION['statut'] == 'administrateur'){
           <h1>Accueil</h1>
           <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
         </div>
+        <div class="ingame_time">
+          <table>
+            <caption>Mes réservations du jours</caption>
+            <tr>
+              <td>Heure de réservation</td>
+              <td>Temps utilisé</td>
+            </tr>
+            <?php include 'php/requetes/resa_adherent_journalieres.php';
+                  while ($donnees = $reponse->fetch()){ ?>
+            <tr>
+              <td><?php echo $donnees['debut_resa']; ?></td>
+              <td><?php echo $donnees['duree']; ?></td>
+            </tr>
+          <?php } ?>
+          </table>
+        </div>
         <section>
           <h3>Brèves</h3>
           <div class="breve">
