@@ -21,12 +21,12 @@ if ($_SESSION['statut'] == 'administrateur'){
         <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
       </div>
       <div>
-        <a href="creation_compte.php">Créer un nouveau compte</a>
+        <a href="creation_compte.php">Créer un nouveau compte</a><br>
         <a href="crea_materiel.php">Créer un nouveau matériel</a>
-        <a href="liste_reservation.php">Liste des réservations</a>
       </div>
       <div class="prochains_departs">
-        <table>
+        <table><br>
+          <caption>Mes réservations du jour</caption>
           <tr>
             <td>Nom</td>
             <td>Prenom</td>
