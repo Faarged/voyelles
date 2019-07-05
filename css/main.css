@@ -37,6 +37,7 @@ a {
 hr {
   background-color: black;
   color: black;
+  border: black solid 1px;
 }
 
 a:hover {
