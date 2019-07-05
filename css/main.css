@@ -69,6 +69,17 @@ header > p {
   padding-top: 0.3em;
   padding-left: 0.3em;
 }
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  text-align: right;
+  }
+
+.head > p {
+    font-size: 2em;
+}
 /* fin du CSS pour le titre du header */
 
 /* barre de navigation du header */
