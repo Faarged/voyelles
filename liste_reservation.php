@@ -3,7 +3,6 @@ session_start();
 if ($_SESSION['statut'] == 'administrateur')
 {
 ?>
-<?php include "php/requetes/liste_resa.php"?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -19,6 +18,30 @@ if ($_SESSION['statut'] == 'administrateur')
       <div class="contenu">
         <h1>Liste réservations</h1>
         <table>
+          <caption>Liste des réservations en cours</caption>
+          <tr>
+            <td>Utilisateur</td>
+            <td>Carte</td>
+            <td>Pegi</td>
+            <td>Heure de début</td>
+            <td>Temps de réservation</td>
+            <td>Matériel réservé</td>
+          </tr>
+          <?php include 'php/requetes/resa_journalieres.php'; ?>
+          <?php while ($donnees = $reponse->fetch()){ ?>
+          <tr>
+            <td><?php echo $donnees['nom']." ".$donnees['prenom']; ?></td>
+            <td><?php echo $donnees['carte']; ?></td>
+            <td><?php echo $donnees['pegi']; ?></td>
+            <td><?php echo $donnees['debut_resa']; ?></td>
+            <td><?php echo $donnees['duree'] ?></td>
+            <td><?php echo $donnees['materiel_res'] ?></td>
+          </tr>
+          <?php } ?>
+        </table>
+        <hr>
+        <table>
+          <caption>Liste de toutes les réservations</caption>
           <tr>
             <td>Utilisateur</td>
             <td>Carte</td>
@@ -28,6 +51,7 @@ if ($_SESSION['statut'] == 'administrateur')
             <td>Temps de réservation</td>
             <td>Matériel réservé</td>
           </tr>
+          <?php include "php/requetes/liste_resa.php"; ?>
           <?php while ($donnees = $reponse->fetch()){ ?>
           <tr>
             <td><?php echo $donnees['nom']." ".$donnees['prenom']; ?></td>
