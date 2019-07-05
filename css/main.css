@@ -137,6 +137,15 @@ tr:hover{
   color: #00FFFF;
 }
 
+form{
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.pegi{
+  display: flex;
+  flex-flow: row wrap;
+}
 /*////////////////////////// X) Footer ////////////////////////////////////*/
 footer {
   margin-top: auto;
