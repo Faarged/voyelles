@@ -57,7 +57,7 @@ if ($_SESSION['statut'] == 'adherent')
             <label for="date_resa1">Date de réservation</label>
               <input type="date" name="date_resa1" value="<?php echo date('Y-m-d'); ?>">
             <label for="debut_resa1">Début de la réservation</label>
-              <input type="time" name="debut_resa1" min='10:00' max='17:45' step='900' value="<?php echo date('H:i'); ?>">
+              <input type="time" name="debut_resa1" min='10:00' max='17:45' step='300' value="<?php echo date('H:i'); ?>">
             <label for="duree1">Temps de réservation</label>
               <input type="time" name="duree1" step='900'>
             <label for="materiel1">Matériel réservé</label>
