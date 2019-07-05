@@ -111,7 +111,7 @@ header > p {
 /* début de la navadmin */
 
 nav {
-  max-width: 20%;
+  min-width: 20%;
 }
 
 .navadmin{
@@ -131,9 +131,10 @@ nav {
 
 .accueil{
   padding-left: 15%;
+  padding-right: 0.5em;
   display: flex;
   flex: 1;
-  max-width: 70%;
+  min-width: 70%;
   flex-flow: column;
 }
 
