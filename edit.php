@@ -53,6 +53,8 @@ require "php/crud/edit/requete_edit.php";
 					<tr>
 						<td> <input type="hidden" name="statut" value="<?php echo $statut; ?>"> </td>
 						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
+					</tr>
+					<tr>
 						<td><input type="submit" name="update" value="Mettre à jour"></td>
 					</tr>
 				</table>
