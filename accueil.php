@@ -71,20 +71,22 @@ if ($_SESSION['statut'] == 'administrateur'){
     </head>
     <body>
       <?php include "header.php"; ?>
-      <div>
-        <h1>Accueil</h1>
-        <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
-      </div>
-      <section>
-        <h3>Brèves</h3>
-        <div class="breve">
-          <?php include 'php/requetes/breve_accueil.php';
-            while ($donnees = $reponse->fetch()){ ?>
-          <h4><?php echo $donnees['titre_breves']; ?></h4>
-          <p><?php echo $donnees['contenu_breves']; ?></p>
-        <?php } ?>
+      <div class="accueil">
+        <div>
+          <h1>Accueil</h1>
+          <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
         </div>
-      </section>
+        <section>
+          <h3>Brèves</h3>
+          <div class="breve">
+            <?php include 'php/requetes/breve_accueil.php';
+              while ($donnees = $reponse->fetch()){ ?>
+            <h4><?php echo $donnees['titre_breves']; ?></h4>
+            <p><?php echo $donnees['contenu_breves']; ?></p>
+          <?php } ?>
+          </div>
+        </section>
+      </div>
       <?php include "footer.php"; ?>
     </body>
   </html>
