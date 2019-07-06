@@ -18,7 +18,8 @@ SET time_zone = "+00:00";
 
 --
 -- Base de données :  `consonne`
---
+CREATE DATABASE IF NOT EXISTS consonne;
+USE consonne;
 
 -- --------------------------------------------------------
 
