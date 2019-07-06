@@ -22,24 +22,17 @@ if ($_SESSION['statut'] == 'administrateur'){
             <caption>Planning</caption>
             <tr>
               <td>Jours:</td>
-              <td>Lundi</td>
-              <td>Mardi</td>
-              <td>Mercredi</td>
-              <td>Jeudi</td>
-              <td>Vendredi</td>
-              <td>Samedi</td>
-              <td>Dimanche</td>
+              <td>Horaires:</td>
+              <td>Modification horaires</td>
             </tr>
+            <?php include 'php/requetes/horaires.php';
+              while ($donnees = $reponse->fetch()){ ?>
             <tr>
-              <td>Ouverture:</td>
-              <td>Fermeture</td>
-              <td>13H00-18H00</td>
-              <td>10H00-18H00</td>
-              <td>13H00-18H00</td>
-              <td>13H00-18H00</td>
-              <td>10H00-18H00</td>
-              <td>Fermeture</td>
+              <td><?php echo $donnees['jour']; ?></td>
+              <td><?php echo $donnees['ouverture']."-".$donnees['fermeture']; ?></td>
+              <td><a href="edit_config.php?id=<?php echo $donnees['id_config']; ?>"><i class="fas fa-cogs"></i></a></td>
             </tr>
+            <?php } ?>
           </table>
         </div>
         <div class="info_complementaires">
