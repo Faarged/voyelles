@@ -38,6 +38,9 @@ if ($_SESSION['statut'] == 'administrateur'){
         <div class="info_complementaires">
           <h2>Informations complémentaires</h2>
           <p>
+            Pour modifier les horaires et laisser le champs vide, il suffit de
+            cliquer sur la croix dans le champs correspondant de la page de
+            modifications.<br>
             Les réservations effectuées ont une durée minimale de 15min
             afin d'éviter les abus de changement de matériel.<br>
             Vous pouvez modifier les données de chaque compte, y compris

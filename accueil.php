@@ -26,12 +26,13 @@ if ($_SESSION['statut'] == 'administrateur'){
       </div>
       <div class="prochains_departs">
         <table><br>
-          <caption>Mes réservations du jour</caption>
+          <caption>Les prochains départs</caption>
           <tr>
             <td>Nom</td>
             <td>Prenom</td>
             <td>Carte</td>
             <td>Début de la réservation</td>
+            <td>Durée</td>
           </tr>
           <?php include 'php/requetes/requete_user.php';//appel bdd
             while ($donnees = $reponse->fetch()){ ?>
@@ -40,6 +41,7 @@ if ($_SESSION['statut'] == 'administrateur'){
             <td><?php echo $donnees["prenom"]; ?></td>
             <td><?php echo $donnees["carte"]; ?></td>
             <td><?php echo $donnees['debut_resa']; ?></td>
+            <td><?php echo $donnees['duree']; ?></td>
           </tr>
         <?php } ?>
         </table>
