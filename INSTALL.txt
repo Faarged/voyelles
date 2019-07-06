@@ -1,0 +1,19 @@
+Prerequistes
+You need PHP7, Apache, Mysql (or mariaDB) and preferably Linux.
+
+Howto
+1 - git clone https://github.com/Faarged/voyelles in your Apache repo
+
+2 - from there configure the database either by 
+    mysql -u user -ppasswd database < consonne_contenu.sql
+    OR you log in and 
+    source consonne_contenu.sql
+
+3 - Configure apache2:
+    Alias /voyelles "/var/www/voyelles"
+    <Directory /var/www/voyelles/>
+    AllowOverride All 
+    Require all granted
+    </Directory>
+
+4 - Open your browser go to localhost/voyelles and  log with catalogage as login and catalogage as password
