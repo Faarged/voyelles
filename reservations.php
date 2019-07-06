@@ -15,7 +15,9 @@ if ($_SESSION['statut'] == 'adherent')
     <?php include "header.php"; ?>
       <div class="contenu">
         <h1>Mes réservations</h1>
+        <br>
         <table>
+          <caption>Mes dernières réservations</caption>
           <tr>
             <td>Date de réservation</td>
             <td>Heure de début</td>
@@ -64,7 +66,9 @@ if ($_SESSION['statut'] == 'adherent')
               <input type="text" name="materiel1" placeholder="Matériel">
             <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>
           </form>
+          <br>
           <table>
+            <caption>Liste des réservations du jour</caption>
             <tr>
               <td>Utilisateur</td>
               <td>Date de réservation</td>

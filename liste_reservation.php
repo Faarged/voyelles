@@ -17,6 +17,9 @@ if ($_SESSION['statut'] == 'administrateur')
       <?php include 'navadmin.php'; ?>
       <div class="contenu">
         <h1>Liste réservations</h1>
+        <p>
+          <a href="reservations.php">Créer une réservation</a>
+        </p>
         <table>
           <caption>Liste des réservations en cours</caption>
           <tr>

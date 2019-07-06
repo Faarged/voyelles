@@ -16,8 +16,11 @@
       <?php include "navadmin.php" ?>
       <div class="contenu">
         <h1>Liste du matériel</h1>
-        <a href="crea_materiel.php">Ajouter du matériel</a>
+        <p>
+          <a href="crea_materiel.php">Ajouter du matériel</a>
+        </p>
         <table>
+          <caption>Liste du matériel disponible</caption>
           <tr>
             <td>Nom</td>
             <td>Type</td>

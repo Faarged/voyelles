@@ -18,10 +18,10 @@ require "php/crud/edit/requete_edit.php";
 		<?php include 'navadmin.php'; ?>
 		<div class="contenu">
 			<h1>Edition de compte</h1>
-			<a href="accueil.php">Accueil</a>
 			<br/><br/>
 			<form name="form1" method="post" action="php/crud/edit/edit.php">
 				<table border="0">
+					<caption>Edition de compte</caption>
 					<tr>
 						<td>Nom</td>
 						<td><input type="text" name="nom" value="<?php echo $nom;?>"></td>

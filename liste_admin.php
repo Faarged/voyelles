@@ -15,9 +15,12 @@
       <?php include "navadmin.php" ?>
       <div class="contenu">
         <h1>Liste des administrateurs</h1>
-        <a href="creation_compte.php">Créer un compte</a>
+        <p>
+          <a href="creation_compte.php">Créer un compte</a>
+        </p>
         <div class="tableau_adherents">
           <table>
+            <caption>Liste des administrateurs</caption>
             <tr>
               <td>Nom</td>
               <td>Prenom</td>
