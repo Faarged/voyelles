@@ -1,5 +1,10 @@
 <header>
-  <p>ESPACE<strong>NUMERIQUE</strong><p>
+  <div class="head">
+  <p>ESPACE<strong>NUMERIQUE</strong></p>
+    <div class="head2">
+  <img src="img/logo.png" width="50%" alt="">
+  </div>
+</div>
   <hr>
   <div class="navbar">
     <p class="nav">
@@ -9,6 +14,7 @@
       <a href="php/deco.php">
         <i class="fas fa-sign-out-alt">Déconnecter <?php echo $_SESSION['pseudo'];?></i>
       </a>
+    </p>
   </div>
   <hr>
 </header>

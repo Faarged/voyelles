@@ -42,7 +42,7 @@
               <td><?php echo $donnees['carte']; ?></td>
               <td><?php echo $donnees['pegi']; ?></td>
               <td><?php echo $donnees['fin_inscription']; ?></td>
-              <td><i class="fas fa-cogs"></i></td>
+              <td><a href="edit.php?id=<?php echo $donnees['id_user']; ?>"><i class="fas fa-cogs"></i></a></td>
               <td><a href="php/crud/suppression/delete.php?id=<?php echo $donnees['id_user']; ?>" onClick="return confirm('Etes vous certain de vouloir supprimer cet utilisateur?')"><i class="fas fa-trash-alt"></i></a></td>
             </tr>
           <?php } ?>

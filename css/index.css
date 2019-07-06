@@ -11,7 +11,7 @@ body {
   margin: 0px;
   display: flex;
   flex-direction: column;
-  background-color: #B3826F;
+  background-color: #0686c1;
 }
 
 html, body {
@@ -34,7 +34,7 @@ form{
   max-height:33%;
   border: solid 2px;
   padding: 0.3em;
-  background-color: #FFCCB8;
+  background-color: #00FFFF;
 }
 
 input{
@@ -50,4 +50,8 @@ button{
 button:hover{
   background-color: #5DB3A4;
   text-decoration: underline;
+}
+
+img {
+  margin-top: 10%;
 }

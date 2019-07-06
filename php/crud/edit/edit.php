@@ -1,11 +1,11 @@
 <?php
-// including the database connection file
+
 require "../../connex_bdd.php";
 
 if(isset($_POST['update']))
 {
 	$id = $_POST['id'];
-
+	$statut = $_POST['statut'];
 	$nom=$_POST['nom'];
 	$prenom=$_POST['prenom'];
 	$date_inscription=$_POST['date_inscription'];
@@ -14,7 +14,7 @@ if(isset($_POST['update']))
 	$pegi=$_POST['pegi'];
 	$fin_inscription=$_POST['fin_inscription'];
 
-	// checking empty fields
+	// vérifie les champs vides
 	if(empty($nom) || empty($prenom) ||  empty($date_inscription) || empty($pseudo) || empty($carte) || empty($pegi) || empty($fin_inscription)) {
 
 		if(empty($nom)) {
@@ -45,7 +45,7 @@ if(isset($_POST['update']))
 			echo "<font color='red'>fin_inscription field is empty.</font><br/>";
 		}
 	} else {
-		//updating the table
+		//requete sql
 		$sql = "UPDATE users SET nom=:nom, prenom=:prenom, date_inscription=:date_inscription, pseudo=:pseudo, carte=:carte, pegi=:pegi, fin_inscription=:fin_inscription WHERE id_user=:id";
 		$query = $bdd->prepare($sql);
 
@@ -59,11 +59,15 @@ if(isset($_POST['update']))
 		$query->bindparam(':fin_inscription', $fin_inscription);
 		$query->execute();
 
-		// Alternative to above bindparam and execute
-		// $query->execute(array(':id' => $id, ':name' => $name, ':email' => $email, ':age' => $age));
+		if($statut == 'adherent'){
+			header("Location: ../../../liste_adherents.php");
+		}elseif ($statut == 'administrateur'){
+			header('Location: ../../../liste_admin.php');
+		}else{
+			header('Location: ../../../index.php');
+		}
 
-		//redirectig to the display page. In our case, it is index.php
-		header("Location: ../../../liste_adherents.php");
+
 	}
 }
 ?>

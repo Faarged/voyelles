@@ -18,7 +18,7 @@ require "php/crud/edit/reserv_requete_edit.php";
 		<?php include 'navadmin.php'; ?>
 		<div class="contenu">
 			<h1>Edition de compte</h1>
-			<a href="accueil.php">Accueil</a>
+			<p><a href="accueil.php">Accueil</a></p>
 			<br/><br/>
 			<form name="form1" method="post" action="php/crud/edit/reserv_edit.php">
 				<table border="0">

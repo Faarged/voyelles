@@ -8,7 +8,8 @@
       <li><a href="liste_admin.php">Administrateurs</a></li>
       <li><a href="breves.php">Brèves</a></li>
       <li><a href="materiel.php">Matériel</a></li>
-      <li><a href="#">Configuration</a></li>
+      <li><a href="liste_reservation.php">Liste des réservations</a></li>
+      <li><a href="configuration.php">Configuration</a></li>
       <li><a href="#">Statistiques</a></li>
     <ul>
   </nav>
