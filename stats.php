@@ -17,21 +17,26 @@
       <div class="contenu">
         <h1>Statistiques</h1>
         <table>
+          <caption>Réservations triées par pegi</caption>
           <tr>
             <td>Nombre de réservations en pegi 6:</td>
-            <td><?php include 'php/requetes/stat_resa_pegi6.php'; ?></td>
+            <td><?php include 'php/requetes/stat_resa_pegi6.php'; echo $pegi_6; ?></td>
           </tr>
           <tr>
             <td>Nombre de réservations en pegi 9:</td>
-            <td><?php include 'php/requetes/stat_resa_pegi9.php'; ?></td>
+            <td><?php include 'php/requetes/stat_resa_pegi9.php'; echo $pegi_9; ?></td>
           </tr>
           <tr>
             <td>Nombre de réservations en pegi 12:</td>
-            <td><?php include 'php/requetes/stat_resa_pegi12.php'; ?></td>
+            <td><?php include 'php/requetes/stat_resa_pegi12.php'; echo $pegi_12; ?></td>
           </tr>
           <tr>
             <td>Nombre de réservations en pegi 18:</td>
-            <td><?php include 'php/requetes/stat_resa_pegi18.php'; ?></td>
+            <td><?php include 'php/requetes/stat_resa_pegi18.php'; echo $pegi_18; ?></td>
+          </tr>
+          <tr>
+            <td>Nombre total de réservations:</td>
+            <td><?php include 'php/requetes/total_resa.php'; echo $total_resa; ?></td>
           </tr>
         </table>
       </div>

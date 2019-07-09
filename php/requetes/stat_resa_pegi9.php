@@ -6,6 +6,6 @@
   AND pegi = 9');
   $pegi->execute();
   while ($donnees = $pegi->fetch()){
-    echo $donnees['pegi'];
+    $pegi_9 = $donnees['pegi'];
   }
 ?>
