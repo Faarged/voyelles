@@ -22,6 +22,7 @@ if ($_SESSION['statut'] == 'adherent')
             <td>Date de réservation</td>
             <td>Heure de début</td>
             <td>Temps de réservation</td>
+            <td>Temps maximum</td>
             <td>Matériel réservé</td>
           </tr>
           <?php include "php/requetes/resa.php";
@@ -29,8 +30,9 @@ if ($_SESSION['statut'] == 'adherent')
           <tr>
             <td><?php echo $donnees['date_resa']; ?></td>
             <td><?php echo $donnees['debut_resa']; ?></td>
-            <td><?php echo $donnees['duree'] ?></td>
-            <td><?php echo $donnees['materiel_res'] ?></td>
+            <td><?php echo $donnees['duree']; ?></td>
+            <td><?php echo $donnees['temps']; ?></td>
+            <td><?php echo $donnees['materiel_res']; ?></td>
           </tr>
           <?php } ?>
         </table>
@@ -74,6 +76,7 @@ if ($_SESSION['statut'] == 'adherent')
               <td>Date de réservation</td>
               <td>Heure de début</td>
               <td>Temps de réservation</td>
+              <td>Temps maximum</td>
               <td>Matériel réservé</td>
               <td>Edition de la durée</td>
             </tr>
@@ -83,8 +86,9 @@ if ($_SESSION['statut'] == 'adherent')
               <td><?php echo $donnees['nom']." ".$donnees['prenom']; ?></td>
               <td><?php echo $donnees['date_resa']; ?></td>
               <td><?php echo $donnees['debut_resa']; ?></td>
-              <td><?php echo $donnees['duree'] ?></td>
-              <td><?php echo $donnees['materiel_res'] ?></td>
+              <td><?php echo $donnees['duree']; ?></td>
+              <td><?php echo $donnees['temps']; ?></td>
+              <td><?php echo $donnees['materiel_res']; ?></td>
               <td><a href="edit_reserv.php?id=<?php echo $donnees['id_resa']; ?>"><i class="fas fa-cogs"></i></a></td>
             </tr>
             <?php } ?>
