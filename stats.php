@@ -16,12 +16,24 @@
       <?php include 'navadmin.php'; ?>
       <div class="contenu">
         <h1>Statistiques</h1>
-        <p>
-          <?php include 'php/requetes/stat_resa_pegi6.php'; ?><br>
-          <?php include 'php/requetes/stat_resa_pegi9.php'; ?><br>
-          <?php include 'php/requetes/stat_resa_pegi12.php'; ?><br>
-          <?php include 'php/requetes/stat_resa_pegi18.php'; ?><br>
-        </p>
+        <table>
+          <tr>
+            <td>Nombre de réservations en pegi 6:</td>
+            <td><?php include 'php/requetes/stat_resa_pegi6.php'; ?><br></td>
+          </tr>
+          <tr>
+            <td>Nombre de réservations en pegi 9:</td>
+            <td><?php include 'php/requetes/stat_resa_pegi9.php'; ?><br></td>
+          </tr>
+          <tr>
+            <td>Nombre de réservations en pegi 12:</td>
+            <td><?php include 'php/requetes/stat_resa_pegi12.php'; ?><br></td>
+          </tr>
+          <tr>
+            <td>Nombre de réservations en pegi 18:</td>
+            <td><?php include 'php/requetes/stat_resa_pegi18.php'; ?><br></td>
+          </tr>
+        </table>
       </div>
     </div>
     <?php include 'footer.php'; ?>
