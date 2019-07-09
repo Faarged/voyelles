@@ -17,25 +17,29 @@ if ($_SESSION['statut'] == 'administrateur'){
       <?php include 'navadmin.php'; ?>
       <div class="contenu">
         <div>
-          <h1>Configuration</h1>
-          <table>
-            <caption>Planning</caption>
-            <tr>
-              <td>Jours:</td>
-              <td>Horaires:</td>
-              <td>Modification horaires</td>
-            </tr>
-            <?php include 'php/requetes/horaires.php';
-              while ($donnees = $reponse->fetch()){ ?>
-            <tr>
-              <td><?php echo $donnees['jour']; ?></td>
-              <td><?php echo $donnees['ouverture']."-".$donnees['fermeture']; ?></td>
-              <td><a href="edit_config.php?id=<?php echo $donnees['id_config']; ?>"><i class="fas fa-cogs"></i></a></td>
-            </tr>
-            <?php } ?>
-          </table>
+          <div class="titre">
+            <h1>Configuration</h1>
+          </div>
+          <div class="perso">
+            <table>
+              <caption>Planning</caption>
+              <tr>
+                <td>Jours:</td>
+                <td>Horaires:</td>
+                <td>Modification horaires</td>
+              </tr>
+              <?php include 'php/requetes/horaires.php';
+                while ($donnees = $reponse->fetch()){ ?>
+              <tr>
+                <td><?php echo $donnees['jour']; ?></td>
+                <td><?php echo $donnees['ouverture']."-".$donnees['fermeture']; ?></td>
+                <td><a href="edit_config.php?id=<?php echo $donnees['id_config']; ?>"><i class="fas fa-cogs"></i></a></td>
+              </tr>
+              <?php } ?>
+            </table>
+          </div>
         </div>
-        <div class="info_complementaires">
+        <div class="info">
           <h2>Informations complémentaires</h2>
           <p>
             Pour modifier les horaires et laisser le champs vide, il suffit de

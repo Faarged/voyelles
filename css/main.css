@@ -175,6 +175,53 @@ input {
   width: 20%;
   text-align: center;
 }
+
+.breve{
+  border: solid 1px #5DB3A4;
+  box-shadow: 2px 2px 5px #B3826F;
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+
+.titre{
+  border: solid 1px #5DB3A4;
+  box-shadow: 2px 2px 5px #B3826F;
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  width: 50%;
+}
+
+.perso{
+  display: flex;
+  border: solid 1px #5DB3A4;
+  box-shadow: 2px 2px 5px #B3826F;
+  margin-top: 0.5em;
+  padding: 0.5em;
+}
+
+.perso > table{
+  width: 100%;
+}
+.perso > form{
+  width: 100%;
+}
+
+.chgt_pass{
+  border: solid 1px #5DB3A4;
+  box-shadow: 2px 2px 5px #B3826F;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  width: 50%;
+}
+
+.info{
+  display: flex;
+  flex-flow: column;
+  border: solid 1px #5DB3A4;
+  box-shadow: 2px 2px 5px #B3826F;
+  margin-top: 0.5em;
+  padding: 0.5em;
+}
 /*////////////////////////// X) Footer ////////////////////////////////////*/
 footer {
   margin-top: auto;

@@ -15,9 +15,11 @@
     <div class="corps">
       <?php include "navadmin.php" ?>
       <div class="contenu">
-        <div>
+        <div class="titre">
           <h1>Brèves</h1>
-          <a href="creation_breve.php">Création de brève</a>
+          <p>
+            <a href="creation_breve.php">Création de brève</a>
+          </p>
         </div>
         <?php include "php/requetes/liste_breves.php";
         while ($donnees = $reponse->fetch()){

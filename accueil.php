@@ -16,15 +16,17 @@ if ($_SESSION['statut'] == 'administrateur'){
     <div class="corps">
       <?php include "navadmin.php" ?>
       <div class="accueil">
-      <div>
+      <div class="titre">
         <h1>Accueil</h1>
         <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
       </div>
-      <div>
-        <a href="creation_compte.php">Créer un nouveau compte</a><br>
-        <a href="crea_materiel.php">Créer un nouveau matériel</a>
+      <div class="perso">
+        <p>
+          <a href="creation_compte.php">Créer un nouveau compte</a><br>
+          <a href="crea_materiel.php">Créer un nouveau matériel</a>
+        </p>
       </div>
-      <div class="prochains_departs">
+      <div class="perso">
         <table><br>
           <caption>Les prochains départs</caption>
           <tr>

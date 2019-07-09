@@ -14,11 +14,13 @@
     <div class="corps">
       <?php include "navadmin.php" ?>
       <div class="contenu">
-        <h1>Liste des adhérents</h1>
-        <p>
-          <a href="creation_compte.php">Créer un compte</a>
-        </p>
-        <div class="tableau_adherents">
+        <div class="titre">
+          <h1>Liste des adhérents</h1>
+          <p>
+            <a href="creation_compte.php">Créer un compte</a>
+          </p>
+        </div>
+        <div class="perso">
           <table>
             <caption>Liste des adhérents</caption>
             <tr>
