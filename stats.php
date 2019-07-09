@@ -19,19 +19,19 @@
         <table>
           <tr>
             <td>Nombre de réservations en pegi 6:</td>
-            <td><?php include 'php/requetes/stat_resa_pegi6.php'; ?><br></td>
+            <td><?php include 'php/requetes/stat_resa_pegi6.php'; ?></td>
           </tr>
           <tr>
             <td>Nombre de réservations en pegi 9:</td>
-            <td><?php include 'php/requetes/stat_resa_pegi9.php'; ?><br></td>
+            <td><?php include 'php/requetes/stat_resa_pegi9.php'; ?></td>
           </tr>
           <tr>
             <td>Nombre de réservations en pegi 12:</td>
-            <td><?php include 'php/requetes/stat_resa_pegi12.php'; ?><br></td>
+            <td><?php include 'php/requetes/stat_resa_pegi12.php'; ?></td>
           </tr>
           <tr>
             <td>Nombre de réservations en pegi 18:</td>
-            <td><?php include 'php/requetes/stat_resa_pegi18.php'; ?><br></td>
+            <td><?php include 'php/requetes/stat_resa_pegi18.php'; ?></td>
           </tr>
         </table>
       </div>
