@@ -18,16 +18,19 @@
     <div class="corps">
       <?php include 'navadmin.php'; ?>
       <div class="contenu">
-        <h1>Changement des horaires</h1>
-        <br><br>
-        <form method="post" action="php/crud/edit/config_edit.php">
-  				<label for="ouverture1">Horaire d'ouverture</label>
-          <input type="time" name="ouverture1" step="600" value="<?php echo $ouverture;?>">
-          <label for="fermeture1">Heure de fermeture</label>
-          <input type="time" name="fermeture1" step="600" value="<?php echo $fermeture;?>">
-          <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
-          <button type="submit" name="update">Mettre à jour</button>
-  			</form>
+        <div class="titre">
+          <h1>Changement des horaires</h1>
+        </div>
+        <div class="perso">
+          <form method="post" action="php/crud/edit/config_edit.php">
+    				<label for="ouverture1">Horaire d'ouverture</label>
+            <input type="time" name="ouverture1" step="600" value="<?php echo $ouverture;?>">
+            <label for="fermeture1">Heure de fermeture</label>
+            <input type="time" name="fermeture1" step="600" value="<?php echo $fermeture;?>">
+            <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+            <button type="submit" name="update">Mettre à jour</button>
+    			</form>
+        </div>
       </div>
     </div>
     <?php include 'footer.php'; ?>

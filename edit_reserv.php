@@ -17,21 +17,26 @@ require "php/crud/edit/reserv_requete_edit.php";
 	<div class="corps">
 		<?php include 'navadmin.php'; ?>
 		<div class="contenu">
-			<h1>Edition de compte</h1>
-			<p><a href="accueil.php">Accueil</a></p>
-			<br/><br/>
-			<form name="form1" method="post" action="php/crud/edit/reserv_edit.php">
-				<table border="0">
-					<tr>
-						<td>duree</td>
-						<td><input type="time" name="duree" value="<?php echo $duree;?>"></td>
-					</tr>
-					<tr>
-						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
-						<td><input type="submit" name="update" value="Mettre à jour"></td>
-					</tr>
-				</table>
-			</form>
+			<div class="titre">
+				<h1>Edition de compte</h1>
+				<p>
+					<a href="accueil.php">Accueil</a>
+				</p>
+			</div>
+			<div class="perso">
+				<form name="form1" method="post" action="php/crud/edit/reserv_edit.php">
+					<table border="0">
+						<tr>
+							<td>duree</td>
+							<td><input type="time" name="duree" value="<?php echo $duree;?>"></td>
+						</tr>
+						<tr>
+							<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
+							<td><input type="submit" name="update" value="Mettre à jour"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
 		</div>
 	</div>
 	<?php include 'footer.php'; ?>
