@@ -136,10 +136,6 @@
               <td>Date de fin d'inscription:</td>
               <td><?php echo $donnees['fin_inscription']; ?></td>
             </tr>
-            <tr>
-              <td>Mon temps de jeu:</td>
-              <td><?php echo $donnees['temps']; ?></td>
-            </tr>
           <?php } ?>
           </table>
           <form class="chgt_pass" action="php/requetes/chgt_pass.php" method="post">
