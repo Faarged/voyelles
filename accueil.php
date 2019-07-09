@@ -19,8 +19,6 @@ if ($_SESSION['statut'] == 'administrateur'){
       <div class="titre">
         <h1>Accueil</h1>
         <h2>Bienvenue <?php echo $_SESSION['pseudo']; ?></h2>
-      </div>
-      <div class="perso">
         <p>
           <a href="creation_compte.php">Créer un nouveau compte</a><br>
           <a href="crea_materiel.php">Créer un nouveau matériel</a>
@@ -50,8 +48,10 @@ if ($_SESSION['statut'] == 'administrateur'){
         <?php } ?>
         </table>
       </div>
-      <section>
-        <h3>Brèves</h3>
+      <section id="breve_accueil">
+        <div class="titre" id="sous-titre">
+          <h3>Brèves</h3>
+        </div>
         <div class="breve">
           <?php include 'php/requetes/breve_accueil.php';
             while ($donnees = $reponse->fetch()){ ?>
