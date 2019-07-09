@@ -54,6 +54,8 @@
             </div>
           <label for="fin_inscription">Date de fin de l'abonnement</label>
             <input type="date" name="fin_inscription" class="fin_inscription">
+        <label for="temps">Temps accordé</label>
+            <input type="time" min="01:00" max="02:00" step="3600" name="temps" value="">
           <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>
         </form>
       </div>

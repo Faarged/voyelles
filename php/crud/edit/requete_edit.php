@@ -15,5 +15,6 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))
 	$carte = $row['carte'];
 	$pegi = $row['pegi'];
 	$fin_inscription = $row['fin_inscription'];
+	$temps = $row['temps'];
 }
 ?>

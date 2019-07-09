@@ -13,7 +13,11 @@ if(isset($_POST['update']))
 	$carte=$_POST['carte'];
 	$pegi=$_POST['pegi'];
 	$fin_inscription=$_POST['fin_inscription'];
-
+	if(!$_POST['temps']){
+	  $temps = NULL;
+	}else{
+	  $temps = $_POST['temps'];
+	}
 	// vérifie les champs vides
 	if(empty($nom) || empty($prenom) ||  empty($date_inscription) || empty($pseudo) || empty($carte) || empty($pegi) || empty($fin_inscription)) {
 
@@ -46,7 +50,7 @@ if(isset($_POST['update']))
 		}
 	} else {
 		//requete sql
-		$sql = "UPDATE users SET nom=:nom, prenom=:prenom, date_inscription=:date_inscription, pseudo=:pseudo, carte=:carte, pegi=:pegi, fin_inscription=:fin_inscription WHERE id_user=:id";
+		$sql = "UPDATE users SET nom=:nom, prenom=:prenom, date_inscription=:date_inscription, pseudo=:pseudo, carte=:carte, pegi=:pegi, fin_inscription=:fin_inscription, temps=:temps WHERE id_user=:id";
 		$query = $bdd->prepare($sql);
 
 		$query->bindparam(':id', $id);
@@ -57,6 +61,7 @@ if(isset($_POST['update']))
 		$query->bindparam(':carte', $carte);
 		$query->bindparam(':pegi', $pegi);
 		$query->bindparam(':fin_inscription', $fin_inscription);
+		$query->bindparam(':temps', $temps);
 		$query->execute();
 
 		if($statut == 'adherent'){

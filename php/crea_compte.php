@@ -12,14 +12,18 @@ $pass = isset($_POST['pass']) ? $_POST['pass'] : NULL;
 $pegi = isset($_POST['pegi']) ? $_POST['pegi'] : NULL;
 $statut = isset($_POST['statut']) ? $_POST['statut'] : NULL;
 $desinscription = isset($_POST['fin_inscription']) ? $_POST['fin_inscription'] : NULL;
-
+if(!$_POST['temps']){
+  $temps = NULL;
+}else{
+  $temps = $_POST['temps'];
+}
 
 // Hachage du mot de passe
 $pass_hache = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 
 // Insertion
- $req = $bdd->prepare('INSERT INTO users(nom, prenom, date_naissance, date_inscription, pseudo, carte, pass, pegi, statut, fin_inscription)
- VALUES(:nom, :prenom, :date_naissance, :date_inscription, :pseudo, :carte, :pass, :pegi, :statut, :fin_inscription)');
+ $req = $bdd->prepare('INSERT INTO users(nom, prenom, date_naissance, date_inscription, pseudo, carte, pass, pegi, statut, fin_inscription, temps)
+ VALUES(:nom, :prenom, :date_naissance, :date_inscription, :pseudo, :carte, :pass, :pegi, :statut, :fin_inscription, :temps)');
  $req->execute(array(
    'nom' => $nom,
    'prenom' => $prenom,
@@ -30,7 +34,8 @@ $pass_hache = password_hash($_POST['pass'], PASSWORD_BCRYPT);
    'pass' => $pass_hache,
    'pegi' => $pegi,
    'statut' => $statut,
-   'fin_inscription' => $desinscription));
+   'fin_inscription' => $desinscription,
+   'temps' => $temps));
 
 header('Location: ../accueil.php')
 ?>

@@ -32,7 +32,8 @@ if ($_SESSION['statut'] == 'administrateur'){
             <td>Prenom</td>
             <td>Carte</td>
             <td>Début de la réservation</td>
-            <td>Durée</td>
+            <td>Durée utilisée</td>
+            <td>Temps maximum</td>
           </tr>
           <?php include 'php/requetes/requete_user.php';//appel bdd
             while ($donnees = $reponse->fetch()){ ?>
@@ -42,6 +43,7 @@ if ($_SESSION['statut'] == 'administrateur'){
             <td><?php echo $donnees["carte"]; ?></td>
             <td><?php echo $donnees['debut_resa']; ?></td>
             <td><?php echo $donnees['duree']; ?></td>
+            <td><?php echo $donnees['temps']; ?></td>
           </tr>
         <?php } ?>
         </table>

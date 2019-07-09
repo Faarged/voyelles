@@ -51,6 +51,10 @@ require "php/crud/edit/requete_edit.php";
 						<td><input type="text" name="fin_inscription" value="<?php echo $fin_inscription;?>"></td>
 					</tr>
 					<tr>
+						<td>Temps maximum autorisé</td>
+						<td><input type="time" min="01:00" max="02:00" step="3600" name="temps" value="<?php echo $temps;?>"></td>
+					</tr>
+					<tr>
 						<td> <input type="hidden" name="statut" value="<?php echo $statut; ?>"> </td>
 						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
 					</tr>
