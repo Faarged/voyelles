@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Sam 06 Juillet 2019 à 10:33
+-- Généré le :  Mar 09 Juillet 2019 à 09:42
 -- Version du serveur :  5.7.26-0ubuntu0.18.04.1
 -- Version de PHP :  7.2.19-0ubuntu0.18.04.1
 
@@ -18,8 +18,7 @@ SET time_zone = "+00:00";
 
 --
 -- Base de données :  `consonne`
-CREATE DATABASE IF NOT EXISTS consonne;
-USE consonne;
+--
 
 -- --------------------------------------------------------
 
@@ -93,12 +92,18 @@ INSERT INTO `fait` (`id_resa`, `id_user`) VALUES
 (20, 2),
 (21, 2),
 (22, 2),
+(24, 2),
+(27, 2),
 (14, 6),
 (15, 6),
 (16, 6),
+(23, 6),
+(26, 6),
 (17, 7),
 (18, 7),
-(19, 7);
+(19, 7),
+(25, 7),
+(28, 7);
 
 -- --------------------------------------------------------
 
@@ -160,7 +165,13 @@ INSERT INTO `reservation` (`id_resa`, `date_resa`, `debut_resa`, `duree`, `mater
 (19, '2019-07-03', '11:30:00', '00:30:00', 'Xbox one'),
 (20, '2019-07-05', '10:45:00', '00:15:00', 'Xbox one'),
 (21, '2019-07-05', '13:30:00', '00:30:00', 'ps4'),
-(22, '2019-07-06', '11:45:00', '00:15:00', 'Xbox one');
+(22, '2019-07-06', '11:45:00', '00:15:00', 'Xbox one'),
+(23, '2019-07-06', '12:55:00', '00:30:00', 'Switch'),
+(24, '2019-07-06', '15:37:00', '00:30:00', 'Switch'),
+(25, '2019-07-06', '15:38:00', '01:00:00', 'Switch'),
+(26, '2019-07-06', '15:38:00', '00:30:00', 'Xbox one'),
+(27, '2019-07-06', '16:46:00', '00:20:00', 'Switch'),
+(28, '2019-07-09', '10:00:00', '00:30:00', 'Switch');
 
 -- --------------------------------------------------------
 
@@ -179,21 +190,23 @@ CREATE TABLE `users` (
   `pass` varchar(250) NOT NULL,
   `pegi` varchar(50) NOT NULL,
   `statut` varchar(50) NOT NULL,
-  `fin_inscription` date NOT NULL COMMENT 'formule date inscription + 365'
+  `fin_inscription` date NOT NULL COMMENT 'formule date inscription + 365',
+  `temps` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id_user`, `nom`, `prenom`, `date_naissance`, `date_inscription`, `pseudo`, `carte`, `pass`, `pegi`, `statut`, `fin_inscription`) VALUES
-(1, 'Stoklosa', 'Lilian', '1992-09-11', '2019-06-25', 'Faarged', '1', '$2y$10$/PeYrKXWAP5TKZuzlGDtbu1aC3CFCsuew3l4lkiL5rp6/IZR7oBru', '18', 'administrateur', '2019-08-25'),
-(2, 'Petite', 'Personne', '2013-01-06', '2019-06-26', 'pepette', '12', '$2y$10$qEzQXaZcmbeLEAgdNWI8puv1HXIACvj6JNVQjNwXW8wzprVghS3W2', '6', 'adherent', '2020-06-26'),
-(4, 'admin', 'admin', '1992-01-08', '2019-06-28', 'admin', '2', '$2y$10$5StkyTONxDnTqmc6PXDswOzJreFKgO8Og344Js9grUCzTjgA0Ccwi', '18', 'administrateur', '2020-01-01'),
-(5, 'guillaume', 'guillaume', '1990-01-01', '2019-07-02', 'guillaume', '3', '$2y$10$K7jDQZWtsJOTwZPlSdxaNupzS8WwIkyULKPZepG4HtocZjYjqLI8S', '18', 'administrateur', '2031-01-01'),
-(6, 'Faarged', 'Dogrof', '1992-09-11', '2019-07-03', 'Degraaf', '7', '$2y$10$WUWC0sp9JaRP/Vhp5X0cwO032.REClCKKTP5PHSqTHJXowLDLJGh6', '18', 'adherent', '2020-06-30'),
-(7, 'Faa', 'Fee', '1999-02-19', '2019-07-03', 'Faergya', '5', '$2y$10$Wn6k426us4avOs37iUj3BO2Q9BTy01kv1bjzV0TNtsQH8dPfNd//y', '18', 'adherent', '2020-07-01'),
-(8, 'Catalogage', 'catalogage', '2000-01-01', '2019-07-03', 'catalogage', '10', '$2y$10$dR1kNLldRu706KUbVJCPf.oFDQDcxQx7NQE4pdiyHGHOcYQ0UVjgS', '18', 'adherent', '2020-07-31');
+INSERT INTO `users` (`id_user`, `nom`, `prenom`, `date_naissance`, `date_inscription`, `pseudo`, `carte`, `pass`, `pegi`, `statut`, `fin_inscription`, `temps`) VALUES
+(1, 'Stoklosa', 'Lilian', '1992-09-11', '2019-06-25', 'Faarged', '1', '$2y$10$/PeYrKXWAP5TKZuzlGDtbu1aC3CFCsuew3l4lkiL5rp6/IZR7oBru', '18', 'administrateur', '2019-08-25', NULL),
+(2, 'Petite', 'Personne', '2013-01-06', '2019-06-26', 'pepette', '12', '$2y$10$qEzQXaZcmbeLEAgdNWI8puv1HXIACvj6JNVQjNwXW8wzprVghS3W2', '6', 'adherent', '2020-06-26', '01:00:00'),
+(4, 'admin', 'admin', '1992-01-08', '2019-06-28', 'admin', '2', '$2y$10$5StkyTONxDnTqmc6PXDswOzJreFKgO8Og344Js9grUCzTjgA0Ccwi', '18', 'administrateur', '2020-01-01', NULL),
+(5, 'guillaume', 'guillaume', '1990-01-01', '2019-07-02', 'guillaume', '3', '$2y$10$K7jDQZWtsJOTwZPlSdxaNupzS8WwIkyULKPZepG4HtocZjYjqLI8S', '18', 'administrateur', '2031-01-01', NULL),
+(6, 'Faarged', 'Dogrof', '1992-09-11', '2019-07-03', 'Degraaf', '7', '$2y$10$WUWC0sp9JaRP/Vhp5X0cwO032.REClCKKTP5PHSqTHJXowLDLJGh6', '18', 'adherent', '2020-06-30', '02:00:00'),
+(7, 'Faa', 'Fee', '1999-02-19', '2019-07-03', 'Faergya', '5', '$2y$10$Wn6k426us4avOs37iUj3BO2Q9BTy01kv1bjzV0TNtsQH8dPfNd//y', '18', 'adherent', '2020-07-01', '02:00:00'),
+(8, 'Catalogage', 'catalogage', '2000-01-01', '2019-07-03', 'catalogage', '10', '$2y$10$dR1kNLldRu706KUbVJCPf.oFDQDcxQx7NQE4pdiyHGHOcYQ0UVjgS', '18', 'adherent', '2020-07-31', '01:00:00'),
+(9, 'Aiken', 'Evahn', '2000-06-08', '2019-07-09', 'Evahn', '0000', '$2y$10$m9.aDPN4rG95JpJF.WCuLu/bv/q6h503lBX6hgNIu72OPRcZ0zNY2', '18', 'adherent', '2020-06-17', '02:00:00');
 
 --
 -- Index pour les tables exportées
@@ -259,12 +272,12 @@ ALTER TABLE `materiel`
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id_resa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_resa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Contraintes pour les tables exportées
 --
