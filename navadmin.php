@@ -10,7 +10,7 @@
       <li><a href="materiel.php">Matériel</a></li>
       <li><a href="liste_reservation.php">Liste des réservations</a></li>
       <li><a href="configuration.php">Configuration</a></li>
-      <li><a href="#">Statistiques</a></li>
+      <li><a href="stats.php">Statistiques</a></li>
     <ul>
   </nav>
 </div>
