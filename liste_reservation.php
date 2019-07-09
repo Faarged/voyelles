@@ -64,6 +64,7 @@ if ($_SESSION['statut'] == 'administrateur')
             <td><?php echo $donnees['debut_resa']; ?></td>
             <td><?php echo $donnees['duree'] ?></td>
             <td><?php echo $donnees['materiel_res'] ?></td>
+            <td><a href="php/crud/suppression/suppr_reserv.php?id=<?php echo $donnees['id_resa']; ?>" onClick="return confirm('Etes vous certain de vouloir supprimer la reservation de <?php echo $donnees['nom']; ?> <?php  echo $donnees['prenom']; ?> ?')"><i class="fas fa-trash-alt"></i></a></td>
           </tr>
           <?php } ?>
         </table>
