@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  background-color: #00FFFF;
+  background-color: white;
   margin: 0px;
   display: flex;
   flex-direction: column;
@@ -111,13 +111,14 @@ header > p {
 }
 /* fin du style avec hover */
 /* fin de la barre de navigation du header */
+
 /*Placement nav admin*/
 .corps{
   display: flex;
   flex-flow: row wrap;
 }
-/* début de la navadmin */
 
+/* début de la navadmin */
 nav {
   min-width: 20%;
 }
@@ -127,6 +128,8 @@ nav {
   box-shadow: 2px 2px 5px #B3826F;
   padding: 0.5em;
 }
+/* fin de la navadmin */
+
 /*////////////////////////// fin header ////////////////////////////////////*/
 
 .contenu{
@@ -154,7 +157,7 @@ table, tr, td{
 
 tr:hover{
   background-color: black;
-  color: #00FFFF;
+  color: white;
 }
 
 form{
