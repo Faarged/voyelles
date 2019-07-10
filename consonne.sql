@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Mar 09 Juillet 2019 à 09:42
+-- Généré le :  Mer 10 Juillet 2019 à 09:49
 -- Version du serveur :  5.7.26-0ubuntu0.18.04.1
 -- Version de PHP :  7.2.19-0ubuntu0.18.04.1
 
@@ -82,7 +82,6 @@ CREATE TABLE `fait` (
 --
 
 INSERT INTO `fait` (`id_resa`, `id_user`) VALUES
-(4, 2),
 (5, 2),
 (6, 2),
 (7, 2),
@@ -103,7 +102,20 @@ INSERT INTO `fait` (`id_resa`, `id_user`) VALUES
 (18, 7),
 (19, 7),
 (25, 7),
-(28, 7);
+(28, 7),
+(29, 7);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `jeux`
+--
+
+CREATE TABLE `jeux` (
+  `id_jeu` int(11) NOT NULL,
+  `titre` varchar(70) NOT NULL,
+  `pegi_jeu` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -171,7 +183,8 @@ INSERT INTO `reservation` (`id_resa`, `date_resa`, `debut_resa`, `duree`, `mater
 (25, '2019-07-06', '15:38:00', '01:00:00', 'Switch'),
 (26, '2019-07-06', '15:38:00', '00:30:00', 'Xbox one'),
 (27, '2019-07-06', '16:46:00', '00:20:00', 'Switch'),
-(28, '2019-07-09', '10:00:00', '00:30:00', 'Switch');
+(28, '2019-07-09', '10:00:00', '00:30:00', 'Switch'),
+(29, '2019-07-09', '15:41:00', '01:00:00', 'Xbox one');
 
 -- --------------------------------------------------------
 
@@ -232,6 +245,12 @@ ALTER TABLE `fait`
   ADD KEY `fait_users0_FK` (`id_user`);
 
 --
+-- Index pour la table `jeux`
+--
+ALTER TABLE `jeux`
+  ADD PRIMARY KEY (`id_jeu`);
+
+--
 -- Index pour la table `materiel`
 --
 ALTER TABLE `materiel`
@@ -264,6 +283,11 @@ ALTER TABLE `breves`
 ALTER TABLE `configuration`
   MODIFY `id_config` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
+-- AUTO_INCREMENT pour la table `jeux`
+--
+ALTER TABLE `jeux`
+  MODIFY `id_jeu` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT pour la table `materiel`
 --
 ALTER TABLE `materiel`
@@ -272,12 +296,12 @@ ALTER TABLE `materiel`
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id_resa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_resa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Contraintes pour les tables exportées
 --
