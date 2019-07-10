@@ -1,18 +1,29 @@
 <?php
-require 'connex_bdd.php';
+  require 'connex_bdd.php';
   $titre = isset($_POST['titre']) ? $_POST['titre'] : NULL;
-    $titre = isset($_POST['pegi_jeu']) ? $_POST['pegi_jeu'] : NULL;
-//REQUETTE SUPPORT A FAIRE
-  $jeu = $bdd->prepare('INSERT INTO jeux (titre, pegi_jeu) VALUES (:titre, :pegi)');
-  $jeu->execute(array(
+  $pegi = isset($_POST['pegi_jeu']) ? $_POST['pegi_jeu'] : NULL;
 
-  "titre"=> $titre
+  //insertion du jeu dans la table jeux
+  $jeu = $bdd->prepare('INSERT INTO jeux (titre, pegi_jeu)
+  VALUES (:titre, :pegi)');
+  $jeu->execute(array(
+  "titre"=> $titre,
   "pegi"=> $pegi));
 
-  $reponse = $bdd->prepare('SELECT id_jeu FROM jeu WHERE titre:'.$titre);
+  //récupération de l'id du jeu nouvellement crée
+  $recup = $bdd->prepare('SELECT * FROM jeux WHERE titre='.$titre);
   $recup->execute();
-
   while ($my_game=$recup->fetch()) {
     $id_game = $my_game['id_jeu'];
   }
+
+  foreach($_POST['materiel'] as $value){
+    $id = $value;
+    $jointure = $bdd->prepare('INSERT INTO disponible(id_jeu, id_materiel)
+    VALUES(:jeu, :mat)');
+    $jointure->execute(array(
+      'jeu' => $id_game,
+      'mat' => $id));
+  }
+  header('Location: ../creation_jeu.php');
  ?>
