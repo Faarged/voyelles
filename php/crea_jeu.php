@@ -12,4 +12,7 @@ require 'connex_bdd.php';
   $reponse = $bdd->prepare('SELECT id_jeu FROM jeu WHERE titre:'.$titre);
   $recup->execute();
 
+  while ($my_game=$recup->fetch()) {
+    $id_game = $my_game['id_jeu'];
+  }
  ?>
