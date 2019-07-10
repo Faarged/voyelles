@@ -43,7 +43,7 @@
             while ($support = $reponse->fetch()) {
             ?>
             <label for="<?php echo $support["nom_materiel"]; ?>"><?php echo $support["nom_materiel"]; ?></label>
-            <input type="checkbox" name="<?php echo $support["nom_materiel"]; ?>" value="<?php echo $support["nom_materiel"]; ?>">
+            <input type="checkbox" name="materiel[]" value="<?php echo $support["nom_materiel"]; ?>">
           <?php } ?>
           <button type="submit" name="submit">Valider</button>
         </form>
