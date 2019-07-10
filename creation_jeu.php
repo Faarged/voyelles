@@ -23,9 +23,9 @@
         <h1>Création de jeu</h1>
       </div>
       <div class="perso">
-        <form class="crea-compte" action="php/crea_compte.php" method="post">
+        <form class="crea-compte" action="php/crea_jeu.php" method="post">
           <label for="nom">Titre</label>
-          <input type="text" class="nom" name="nom" placeholder="Nom">
+          <input type="text" name="titre" placeholder="Titre">
 
           <!--pegi, statut, date de fin -->
           <label for="pegi">PEGI</label>
@@ -46,7 +46,7 @@
             <option value=""><?php echo $support["nom_materiel"]; ?></option>
           <?php } ?>
           </select>
-          <button type="submit" name="submit" class="valider, bouton" value="envoyer">Valider</button>
+          <button type="submit" name="submit">Valider</button>
         </form>
       </div>
     </div>
