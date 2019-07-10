@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Mer 10 Juillet 2019 à 09:49
+-- Généré le :  Mer 10 Juillet 2019 à 10:16
 -- Version du serveur :  5.7.26-0ubuntu0.18.04.1
 -- Version de PHP :  7.2.19-0ubuntu0.18.04.1
 
@@ -65,6 +65,17 @@ INSERT INTO `configuration` (`id_config`, `jour`, `ouverture`, `fermeture`) VALU
 (5, 'Vendredi', '13:00:00', '18:00:00'),
 (6, 'Samedi', '10:00:00', '18:00:00'),
 (7, 'Dimanche', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `disponible`
+--
+
+CREATE TABLE `disponible` (
+  `id_jeu` int(11) NOT NULL,
+  `id_materiel` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -238,6 +249,13 @@ ALTER TABLE `configuration`
   ADD PRIMARY KEY (`id_config`);
 
 --
+-- Index pour la table `disponible`
+--
+ALTER TABLE `disponible`
+  ADD PRIMARY KEY (`id_jeu`,`id_materiel`),
+  ADD KEY `disponible_materiel0_FK` (`id_materiel`);
+
+--
 -- Index pour la table `fait`
 --
 ALTER TABLE `fait`
@@ -305,6 +323,13 @@ ALTER TABLE `users`
 --
 -- Contraintes pour les tables exportées
 --
+
+--
+-- Contraintes pour la table `disponible`
+--
+ALTER TABLE `disponible`
+  ADD CONSTRAINT `disponible_jeux_FK` FOREIGN KEY (`id_jeu`) REFERENCES `jeux` (`id_jeu`),
+  ADD CONSTRAINT `disponible_materiel0_FK` FOREIGN KEY (`id_materiel`) REFERENCES `materiel` (`id_materiel`);
 
 --
 -- Contraintes pour la table `fait`
