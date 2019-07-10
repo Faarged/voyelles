@@ -39,13 +39,12 @@
             <input type="radio" id="option4" autocomplete="off" name="pegi" value="18">
             <p>18</p>
           </div>
-          <select>
             <?php include 'php/requetes/search_materiel.php';
             while ($support = $reponse->fetch()) {
             ?>
-            <option value=""><?php echo $support["nom_materiel"]; ?></option>
+            <label for="<?php echo $support["nom_materiel"]; ?>"><?php echo $support["nom_materiel"]; ?></label>
+            <input type="checkbox" name="<?php echo $support["nom_materiel"]; ?>" value="<?php echo $support["nom_materiel"]; ?>">
           <?php } ?>
-          </select>
           <button type="submit" name="submit">Valider</button>
         </form>
       </div>
