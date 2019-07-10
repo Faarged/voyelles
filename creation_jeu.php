@@ -40,7 +40,7 @@
             <p>18</p>
           </div>
           <select>
-            <?php include 'php\requetes\search_materiel.php';
+            <?php include 'php/requetes/search_materiel.php';
             while ($support = $reponse->fetch()) {
             ?>
             <option value=""><?php echo $support["nom_materiel"]; ?></option>
