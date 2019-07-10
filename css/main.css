@@ -176,6 +176,17 @@ input {
   text-align: center;
 }
 
+select {
+  width: 20%;
+  text-align: center;
+}
+
+.bouton {
+  margin-top: 10px;
+    width: 20%;
+    text-align: center;
+}
+
 .breve{
   border: solid 1px #5DB3A4;
   box-shadow: 2px 2px 5px #B3826F;
