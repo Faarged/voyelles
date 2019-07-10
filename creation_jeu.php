@@ -43,7 +43,7 @@
             <?php include 'php\requetes\search_materiel.php';
             while ($support = $reponse->fetch()) {
             ?>
-            <option value="1"><?php echo $support["nom_materiel"]; ?></option>
+            <option value=""><?php echo $support["nom_materiel"]; ?></option>
           <?php } ?>
           </select>
           <button type="submit" name="submit" class="valider, bouton" value="envoyer">Valider</button>
