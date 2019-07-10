@@ -11,8 +11,8 @@
   "pegi"=> $pegi));
 
   //récupération de l'id du jeu nouvellement crée
-  $recup = $bdd->prepare('SELECT id_jeu FROM jeux WHERE titre='.$titre);
-  $recup->execute();
+  $recup = $bdd->prepare('SELECT id_jeu FROM jeux WHERE titre= :titre');
+  $recup->execute(array('titre' => $titre));
   while ($my_game = $recup->fetch()) {
     $id_game = $my_game['id_jeu'];
   }
