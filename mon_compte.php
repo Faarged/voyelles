@@ -77,6 +77,24 @@
           <br>
           <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>
         </form>
+        <div class="perso">
+          <table>
+            <caption>Liste des jeux auxquels j'ai accès</caption>
+            <tr>
+              <td><strong>Titre</strong></td>
+              <td><strong>PEGI</strong></td>
+              <td><strong>Support(s)</strong></td>
+            </tr>
+            <?php include 'php/requetes/liste_jeux.php';
+              while ($donnees = $reponse->fetch()){ ?>
+            <tr>
+              <td><?php echo $donnees['titre']; ?></td>
+              <td><?php echo $donnees['pegi_jeu']; ?></td>
+              <td><?php echo $donnees['nom_materiel']; ?></td>
+            </tr>
+            <?php } ?>
+          </table>
+        </div>
       </div>
     </div>
     <?php include "footer.php"; ?>
