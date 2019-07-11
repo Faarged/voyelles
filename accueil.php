@@ -12,6 +12,7 @@ if ($_SESSION['statut'] == 'administrateur'){
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <?php require 'php/crud/suppression/fin_abo.php'; ?>
     <?php include "header.php"; ?>
     <div class="corps">
       <?php include "navadmin.php" ?>

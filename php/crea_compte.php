@@ -37,5 +37,5 @@ $pass_hache = password_hash($_POST['pass'], PASSWORD_BCRYPT);
    'fin_inscription' => $desinscription,
    'temps' => $temps));
 
-header('Location: ../accueil.php')
+header('Location: ../liste_adherents.php');
 ?>
