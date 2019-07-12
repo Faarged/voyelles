@@ -80,7 +80,14 @@ if ($_SESSION['statut'] == 'adherent')
               <?php } ?>
               </SELECT>
               <label for="jeu">Jeu</label>
-                <input type="text" name="jeu" placeholder="Jeu">
+                <select name="jeu" size="5">
+                <?php include 'php/requetes/resa_jeu.php';
+                  while($donnees = $reponse->fetch()){?>
+                  <OPTION> <?php echo $donnees['titre'] ?>
+                <?php } ?>
+                </SELECT>
+
+                </select>
               <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>
             </form>
           </div>
