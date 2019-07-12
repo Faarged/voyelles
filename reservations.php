@@ -70,7 +70,7 @@ if ($_SESSION['statut'] == 'adherent')
               <label for="debut_resa1">Début de la réservation</label>
                 <input type="time" name="debut_resa1" min='10:00' max='17:45' value="<?php echo date('H:i'); ?>">
               <label for="duree1">Temps de réservation</label>
-                <input type="time" name="duree1" max='02:00' step='300'>
+                <input type="time" name="duree1" min="00:15" max='02:00' step='300'>
               <label for="materiel1">Matériel réservé</label>
               <?php include 'php/requetes/search_materiel.php';
                 while($donnees = $reponse->fetch()){?>
