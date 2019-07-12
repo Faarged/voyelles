@@ -11,6 +11,10 @@ $supprime = $bdd->prepare("DELETE FROM fait WHERE id_resa = :id");
 $supprime->execute(array(
   ':id' => $id
 ));
+$finres = $bdd->prepare('DELETE FROM reservation WHERE id_resa = :id');
+$finres->execute(array(
+  ':id' => $id
+));
 
 //redirection
 header("Location: ../../../liste_reservation.php");
