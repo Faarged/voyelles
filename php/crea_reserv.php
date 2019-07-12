@@ -12,18 +12,19 @@
   while ($donnees = $req->fetch()){
     $id_use = $donnees['id_user'];
     }
-    $resa = $bdd->prepare('INSERT INTO reservation(date_resa, debut_resa, duree, materiel_res)
-    VALUES(:resa, :debut, :duree, :materiel)');
+    $resa = $bdd->prepare('INSERT INTO reservation(date_resa, debut_resa, duree, materiel_res, jeu_reserv)
+    VALUES(:resa, :debut, :duree, :materiel, :jeu)');
     $resa->execute(array(
       'resa' => $date_resa,
       'debut' => $debut_resa,
       'duree' => $duree,
-      'materiel' => $materiel
+      'materiel' => $materiel,
+      'jeu' => $jeu
     ));
     $recup = $bdd->prepare("SELECT id_resa FROM reservation
       WHERE date_resa ='".$date_resa."'
       AND debut_resa='".$debut_resa."'
-      AND duree='".$duree."' 
+      AND duree='".$duree."'
       AND materiel_res='".$materiel."'");
     $recup->execute();
     while ($my_id = $recup->fetch()){
