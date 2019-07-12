@@ -72,10 +72,13 @@ if ($_SESSION['statut'] == 'adherent')
               <label for="duree1">Temps de réservation</label>
                 <input type="time" name="duree1" min="00:15" max='02:00' step='300'>
               <label for="materiel1">Matériel réservé</label>
+
+              <SELECT name="materiel1" size="2">
               <?php include 'php/requetes/search_materiel.php';
                 while($donnees = $reponse->fetch()){?>
-                <input type="text" name="materiel1" placeholder="Matériel">
+                <OPTION> <?php echo $donnees['nom_materiel'] ?>
               <?php } ?>
+              </SELECT>
               <label for="jeu">Jeu</label>
                 <input type="text" name="jeu" placeholder="Jeu">
               <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>
