@@ -102,6 +102,7 @@ if ($_SESSION['statut'] == 'adherent')
                 <td>Temps de réservation</td>
                 <td>Temps maximum</td>
                 <td>Matériel réservé</td>
+                <td>Jeu réservé</td>
                 <td>Edition de la durée</td>
               </tr>
               <?php include "php/requetes/resa_journalieres.php";
@@ -113,6 +114,7 @@ if ($_SESSION['statut'] == 'adherent')
                 <td><?php echo $donnees['duree']; ?></td>
                 <td><?php echo $donnees['temps']; ?></td>
                 <td><?php echo $donnees['materiel_res']; ?></td>
+                <td><?php echo $donnees['jeu_reserv']; ?></td>
                 <td><a href="edit_reserv.php?id=<?php echo $donnees['id_resa']; ?>"><i class="fas fa-cogs"></i></a></td>
               </tr>
               <?php } ?>

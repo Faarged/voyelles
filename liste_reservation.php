@@ -32,6 +32,7 @@ if ($_SESSION['statut'] == 'administrateur')
               <td>Heure de début</td>
               <td>Temps de réservation</td>
               <td>Matériel réservé</td>
+              <td>Jeu réservé</td>
             </tr>
             <?php include 'php/requetes/resa_journalieres.php'; ?>
             <?php while ($donnees = $reponse->fetch()){ ?>
@@ -42,6 +43,7 @@ if ($_SESSION['statut'] == 'administrateur')
               <td><?php echo $donnees['debut_resa']; ?></td>
               <td><?php echo $donnees['duree'] ?></td>
               <td><?php echo $donnees['materiel_res'] ?></td>
+              <td><?php echo $donnees['jeu_reserv']; ?></td>
             </tr>
             <?php } ?>
           </table>
@@ -58,6 +60,7 @@ if ($_SESSION['statut'] == 'administrateur')
               <td>Heure de début</td>
               <td>Temps de réservation</td>
               <td>Matériel réservé</td>
+              <td>Jeu réservé</td>
             </tr>
             <?php include "php/requetes/liste_resa.php"; ?>
             <?php while ($donnees = $reponse->fetch()){ ?>
@@ -69,6 +72,7 @@ if ($_SESSION['statut'] == 'administrateur')
               <td><?php echo $donnees['debut_resa']; ?></td>
               <td><?php echo $donnees['duree'] ?></td>
               <td><?php echo $donnees['materiel_res'] ?></td>
+              <td><?php echo $donnees['jeu_reserv']; ?></td>
               <td><a href="php/crud/suppression/suppr_reserv.php?id=<?php echo $donnees['id_resa']; ?>" onClick="return confirm('Etes vous certain de vouloir supprimer la reservation de <?php echo $donnees['nom']; ?> <?php  echo $donnees['prenom']; ?> ?')"><i class="fas fa-trash-alt"></i></a></td>
             </tr>
             <?php } ?>
