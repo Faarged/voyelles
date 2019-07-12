@@ -6,6 +6,7 @@
   $debut_resa = isset($_POST['debut_resa1']) ? $_POST['debut_resa1'] : NULL;
   $duree = isset($_POST['duree1']) ? $_POST['duree1'] : NULL;
   $materiel = isset($_POST['materiel1']) ? $_POST['materiel1'] : NULL;
+  $jeu = isset($_POST['jeu']) ? $_POST['jeu'] : NULL;
 
   $req = $bdd->prepare('SELECT id_user FROM users WHERE carte ='.$carte);
   $req->execute();
