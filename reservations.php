@@ -73,6 +73,8 @@ if ($_SESSION['statut'] == 'adherent')
                 <input type="time" name="duree1" max='02:00' step='300'>
               <label for="materiel1">Matériel réservé</label>
                 <input type="text" name="materiel1" placeholder="Matériel">
+              <label for="jeu">Jeu</label>
+                <input type="text" name="jeu" placeholder="Jeu">
               <button type="submit" name="submit" class="valider" value="envoyer">Valider</button>
             </form>
           </div>
