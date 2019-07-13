@@ -22,7 +22,7 @@
         </div>
         <div class="perso">
           <table>
-            <caption>Liste des adhérents</caption>
+            <caption>Liste des jeux</caption>
             <tr>
               <td>Jeu</td>
               <td>PEGI</td>
