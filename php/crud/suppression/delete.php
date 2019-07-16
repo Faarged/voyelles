@@ -1,11 +1,12 @@
 <?php
-//including the database connection file
+//connexion à la base de données
 require "../../connex_bdd.php";
 
-//getting id of the data from url
+//on récupère l'id avec un get
 $id = $_GET['id'];
 
-//deleting the row from table
+/*on efface la ligne des tables de jointure
+en premier puis de la table principale*/
 $jointure = "DELETE FROM fait WHERE id_user=:id";
 $supprime = $bdd->prepare($jointure);
 $supprime->execute(array(':id' => $id));
@@ -13,6 +14,6 @@ $sql = "DELETE FROM users WHERE id_user=:id";
 $query = $bdd->prepare($sql);
 $query->execute(array(':id' => $id));
 
-//redirecting to the display page (index.php in our case)
+//redirection après traitement
 header("Location: ../../../accueil.php");
 ?>
