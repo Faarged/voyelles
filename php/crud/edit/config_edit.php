@@ -1,8 +1,11 @@
 <?php
+//connexion à la base de données
 require "../../connex_bdd.php";
 
+//Si on clique sur update:
 if(isset($_POST['update'])){
   $id = isset($_POST['id']) ? $_POST['id'] : NULL;
+  //définition des variables pour l'update
   if(!$_POST['ouverture1']){
     $ouverture = NULL;
   }else{
@@ -13,6 +16,8 @@ if(isset($_POST['update'])){
   }else{
     $fermeture = $_POST['fermeture1'];
   }
+
+  //la requete pour UPDATE
   $req = $bdd->prepare('UPDATE configuration
     SET ouverture = :ouvert, fermeture = :ferme
     WHERE id_config = :id');
@@ -21,6 +26,7 @@ if(isset($_POST['update'])){
       'ferme' => $fermeture,
       'id' => $id
     ));
+    //une redirection vers la page de configuration
   header('Location: ../../../configuration.php');
 }
 ?>
